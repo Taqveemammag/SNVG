@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "paymentMethod";
+    Layout = "~/Views/Shared/_sharedLayout.cshtml";
+}
+<link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <div class="center-1">
+            <style type="text/css">
+                .login-text-cntnr {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    padding: 100px 0;
+                }
+
+                #Login-page {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+                }
+
+                    #Login-page::before {
+                        position: absolute;
+                        bottom: -15px;
+                        width: 100%;
+                        left: 0;
+                        height: 15px;
+                        content: "";
+                        background-image: url(images/code.jpg/);
+                    }
+
+                .login-text-cntnr {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 auto;
+                    max-width: 415px;
+                    width: 100%;
+                }
+
+                    .login-text-cntnr input {
+                        margin-bottom: 15px;
+                        border-radius: 0;
+                        border: 2px solid #000;
+                    }
+
+                    .login-text-cntnr h2 {
+                        top: -100px;
+                        font-size: 40px;
+                        color: #333333;
+                        margin: 0;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+            </style>
+            <div id="Login-page" class="inner-page">
+
+                <div class="inner-page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="login-text-cntnr">
+                                <h3>How would you like to pay?</h3>
+                                <form role="form">
+                                    <div class="Summary___style-module__container___J99Zc">
+
+                                        <div class="Summary___style-module__item___zxXzp">
+                                            <div>Free delivery and returns</div>
+                                            <div>£0</div>
+                                        </div>
+                                        <div class="Summary___style-module__item___zxXzp">
+                                            <div class="Summary___style-module__item-content___hSqNI">
+                                                Styling charge
+                                                <ul class="Summary___style-module__fee-summary___BFP5x">
+                                                    <li>Will be deducted from the cost of any items you purchase</li>
+                                                </ul>
+                                            </div><div>£10</div>
+                                        </div><div class="Summary___style-module__total___h74c9">
+                                            <div>Total</div>
+                                            <div>£10</div>
+                                        </div>
+                                        <h1 class="Summary___style-module__title___X8FZV Summary___style-module__payment-copy___AqF7w">Add your payment details</h1>
+                                    </div>
+                                    <input autocomplete="off" class="form-control" name="" placeholder="Address" type="text">
+                                    <input autocomplete="off" class="form-control" name="" placeholder="Address 2" type="text">
+                                    <input type="checkbox" value="Cash on Delivery" id="cashdelivery" style="margin-right:20px" /><label>Cash on delivery</label>
+                                    <a href="../Authorize/thanks">
+                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next : Shipping" type="button">
+                                    </a>
+                                    <input autocomplete="off" style="border:hidden; background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

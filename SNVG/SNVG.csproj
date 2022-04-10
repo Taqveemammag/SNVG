@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D5BDD46-068C-4EB9-B0FE-8A58668C9BCF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SNVG</RootNamespace>
+    <AssemblyName>SNVG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44351</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthorizeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="wwwroot\css\bootstrap-responsive.min.css" />
+    <Content Include="wwwroot\css\bootstrap.min.css" />
+    <Content Include="wwwroot\css\font-awesome.css" />
+    <Content Include="wwwroot\css\jquery-select7.css" />
+    <Content Include="wwwroot\css\mensizecomponent.css" />
+    <Content Include="wwwroot\css\responsive copy.css" />
+    <Content Include="wwwroot\css\responsive.css" />
+    <Content Include="wwwroot\css\style.css" />
+    <Content Include="wwwroot\css\theme.css" />
+    <Content Include="wwwroot\fonts\._demo.html" />
+    <Content Include="wwwroot\fonts\._font-awesome.css" />
+    <Content Include="wwwroot\fonts\._fontawesome-webfont.svg" />
+    <Content Include="wwwroot\fonts\._glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\fonts\._SavoyeLetPlain.svg" />
+    <Content Include="wwwroot\fonts\._stylesheet.css" />
+    <Content Include="wwwroot\fonts\demo.html" />
+    <Content Include="wwwroot\fonts\font-awesome.css" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\fonts\SavoyeLetPlain.svg" />
+    <Content Include="wwwroot\fonts\stylesheet.css" />
+    <Content Include="wwwroot\images\._add-1.jpg" />
+    <Content Include="wwwroot\images\._arow-bg.jpg" />
+    <Content Include="wwwroot\images\._arrow-down.png" />
+    <Content Include="wwwroot\images\._arrow-left.png" />
+    <Content Include="wwwroot\images\._arrow-right.png" />
+    <Content Include="wwwroot\images\._banner-1.jpg" />
+    <Content Include="wwwroot\images\._banner-2.jpg" />
+    <Content Include="wwwroot\images\._banner-bottom.png" />
+    <Content Include="wwwroot\images\._bg copy 2.jpg" />
+    <Content Include="wwwroot\images\._bg copy.jpg" />
+    <Content Include="wwwroot\images\._bg-1.jpg" />
+    <Content Include="wwwroot\images\._bg.jpg" />
+    <Content Include="wwwroot\images\._big-1.jpg" />
+    <Content Include="wwwroot\images\._big-1.png" />
+    <Content Include="wwwroot\images\._bkt.png" />
+    <Content Include="wwwroot\images\._bucket.png" />
+    <Content Include="wwwroot\images\._captcha.png" />
+    <Content Include="wwwroot\images\._card-1.png" />
+    <Content Include="wwwroot\images\._card.png" />
+    <Content Include="wwwroot\images\._catogry-1.jpg" />
+    <Content Include="wwwroot\images\._catogry-2.jpg" />
+    <Content Include="wwwroot\images\._catogry-3.jpg" />
+    <Content Include="wwwroot\images\._catogry-4.jpg" />
+    <Content Include="wwwroot\images\._catogry-5.jpg" />
+    <Content Include="wwwroot\images\._catogry-6.jpg" />
+    <Content Include="wwwroot\images\._catogry-7.jpg" />
+    <Content Include="wwwroot\images\._catogry-8.jpg" />
+    <Content Include="wwwroot\images\._catogry-9.jpg" />
+    <Content Include="wwwroot\images\._chckout-1.png" />
+    <Content Include="wwwroot\images\._chckout-2.png" />
+    <Content Include="wwwroot\images\._code.jpg" />
+    <Content Include="wwwroot\images\._colctn-1.jpg" />
+    <Content Include="wwwroot\images\._colctn-10.jpg" />
+    <Content Include="wwwroot\images\._colctn-11.jpg" />
+    <Content Include="wwwroot\images\._colctn-12.jpg" />
+    <Content Include="wwwroot\images\._colctn-13.jpg" />
+    <Content Include="wwwroot\images\._colctn-14.jpg" />
+    <Content Include="wwwroot\images\._colctn-15.jpg" />
+    <Content Include="wwwroot\images\._colctn-2.jpg" />
+    <Content Include="wwwroot\images\._colctn-3.jpg" />
+    <Content Include="wwwroot\images\._colctn-4.jpg" />
+    <Content Include="wwwroot\images\._colctn-5.jpg" />
+    <Content Include="wwwroot\images\._colctn-6.jpg" />
+    <Content Include="wwwroot\images\._colctn-7.jpg" />
+    <Content Include="wwwroot\images\._colctn-8.jpg" />
+    <Content Include="wwwroot\images\._colctn-9.jpg" />
+    <Content Include="wwwroot\images\._fdx.png" />
+    <Content Include="wwwroot\images\._flag-1.jpg" />
+    <Content Include="wwwroot\images\._flag-2.jpg" />
+    <Content Include="wwwroot\images\._flag-3.jpg" />
+    <Content Include="wwwroot\images\._flag-4.jpg" />
+    <Content Include="wwwroot\images\._flag-5.jpg" />
+    <Content Include="wwwroot\images\._flag-6.jpg" />
+    <Content Include="wwwroot\images\._flag.png" />
+    <Content Include="wwwroot\images\._foot-1.png" />
+    <Content Include="wwwroot\images\._foot-2.png" />
+    <Content Include="wwwroot\images\._foot-3.png" />
+    <Content Include="wwwroot\images\._ftr-1.jpg" />
+    <Content Include="wwwroot\images\._icon-1.png" />
+    <Content Include="wwwroot\images\._icon-2.png" />
+    <Content Include="wwwroot\images\._logo-1.png" />
+    <Content Include="wwwroot\images\._logo.png" />
+    <Content Include="wwwroot\images\._mission-1.jpg" />
+    <Content Include="wwwroot\images\._mission-2.jpg" />
+    <Content Include="wwwroot\images\._mission-3.jpg" />
+    <Content Include="wwwroot\images\._recent-1.jpg" />
+    <Content Include="wwwroot\images\._recent-2.jpg" />
+    <Content Include="wwwroot\images\._recent-3.jpg" />
+    <Content Include="wwwroot\images\._search.png" />
+    <Content Include="wwwroot\images\._shoes-1.jpg" />
+    <Content Include="wwwroot\images\._shoes-1.png" />
+    <Content Include="wwwroot\images\._shoes-2.jpg" />
+    <Content Include="wwwroot\images\._shoes-3.jpg" />
+    <Content Include="wwwroot\images\._shoes-3.png" />
+    <Content Include="wwwroot\images\._shoes-4.jpg" />
+    <Content Include="wwwroot\images\._shoes-4.png" />
+    <Content Include="wwwroot\images\._shoes-5.jpg" />
+    <Content Include="wwwroot\images\._shoes-6.jpg" />
+    <Content Include="wwwroot\images\._shoes-7.jpg" />
+    <Content Include="wwwroot\images\._shoes-8.jpg" />
+    <Content Include="wwwroot\images\._slct.png" />
+    <Content Include="wwwroot\images\._star.png" />
+    <Content Include="wwwroot\images\._subscribe-bg.jpg" />
+    <Content Include="wwwroot\images\._thanks.jpg" />
+    <Content Include="wwwroot\images\._truck.png" />
+    <Content Include="wwwroot\images\15.png" />
+    <Content Include="wwwroot\images\16.png" />
+    <Content Include="wwwroot\images\17.png" />
+    <Content Include="wwwroot\images\add-1.jpg" />
+    <Content Include="wwwroot\images\arow-bg.jpg" />
+    <Content Include="wwwroot\images\arrow-down.png" />
+    <Content Include="wwwroot\images\arrow-left.png" />
+    <Content Include="wwwroot\images\arrow-right.png" />
+    <Content Include="wwwroot\images\banner-1.jpg" />
+    <Content Include="wwwroot\images\banner-2.jpg" />
+    <Content Include="wwwroot\images\banner-bottom.png" />
+    <Content Include="wwwroot\images\bg copy 2.jpg" />
+    <Content Include="wwwroot\images\bg copy.jpg" />
+    <Content Include="wwwroot\images\bg-1.jpg" />
+    <Content Include="wwwroot\images\bg.jpg" />
+    <Content Include="wwwroot\images\big-1.jpg" />
+    <Content Include="wwwroot\images\big-1.png" />
+    <Content Include="wwwroot\images\bkt.png" />
+    <Content Include="wwwroot\images\bucket.png" />
+    <Content Include="wwwroot\images\captcha.png" />
+    <Content Include="wwwroot\images\card-1.png" />
+    <Content Include="wwwroot\images\card.png" />
+    <Content Include="wwwroot\images\catogry-1.jpg" />
+    <Content Include="wwwroot\images\catogry-2.jpg" />
+    <Content Include="wwwroot\images\catogry-3.jpg" />
+    <Content Include="wwwroot\images\catogry-4.jpg" />
+    <Content Include="wwwroot\images\catogry-5.jpg" />
+    <Content Include="wwwroot\images\catogry-6.jpg" />
+    <Content Include="wwwroot\images\catogry-7.jpg" />
+    <Content Include="wwwroot\images\catogry-8.jpg" />
+    <Content Include="wwwroot\images\catogry-9.jpg" />
+    <Content Include="wwwroot\images\chckout-1.png" />
+    <Content Include="wwwroot\images\chckout-2.png" />
+    <Content Include="wwwroot\images\code.jpg" />
+    <Content Include="wwwroot\images\colctn-1.jpg" />
+    <Content Include="wwwroot\images\colctn-10.jpg" />
+    <Content Include="wwwroot\images\colctn-11.jpg" />
+    <Content Include="wwwroot\images\colctn-12.jpg" />
+    <Content Include="wwwroot\images\colctn-13.jpg" />
+    <Content Include="wwwroot\images\colctn-14.jpg" />
+    <Content Include="wwwroot\images\colctn-15.jpg" />
+    <Content Include="wwwroot\images\colctn-2.jpg" />
+    <Content Include="wwwroot\images\colctn-3.jpg" />
+    <Content Include="wwwroot\images\colctn-4.jpg" />
+    <Content Include="wwwroot\images\colctn-5.jpg" />
+    <Content Include="wwwroot\images\colctn-6.jpg" />
+    <Content Include="wwwroot\images\colctn-7.jpg" />
+    <Content Include="wwwroot\images\colctn-8.jpg" />
+    <Content Include="wwwroot\images\colctn-9.jpg" />
+    <Content Include="wwwroot\images\fdx.png" />
+    <Content Include="wwwroot\images\flag-1.jpg" />
+    <Content Include="wwwroot\images\flag-2.jpg" />
+    <Content Include="wwwroot\images\flag-3.jpg" />
+    <Content Include="wwwroot\images\flag-4.jpg" />
+    <Content Include="wwwroot\images\flag-5.jpg" />
+    <Content Include="wwwroot\images\flag-6.jpg" />
+    <Content Include="wwwroot\images\flag.png" />
+    <Content Include="wwwroot\images\foot-1.png" />
+    <Content Include="wwwroot\images\foot-2.png" />
+    <Content Include="wwwroot\images\foot-3.png" />
+    <Content Include="wwwroot\images\ftr-1.jpg" />
+    <Content Include="wwwroot\images\icon-1.png" />
+    <Content Include="wwwroot\images\icon-2.png" />
+    <Content Include="wwwroot\images\logo-1.png" />
+    <Content Include="wwwroot\images\logo.png" />
+    <Content Include="wwwroot\images\mission-1.jpg" />
+    <Content Include="wwwroot\images\mission-2.jpg" />
+    <Content Include="wwwroot\images\mission-3.jpg" />
+    <Content Include="wwwroot\images\recent-1.jpg" />
+    <Content Include="wwwroot\images\recent-2.jpg" />
+    <Content Include="wwwroot\images\recent-3.jpg" />
+    <Content Include="wwwroot\images\search.png" />
+    <Content Include="wwwroot\images\shoes-1.jpg" />
+    <Content Include="wwwroot\images\shoes-1.png" />
+    <Content Include="wwwroot\images\shoes-2.jpg" />
+    <Content Include="wwwroot\images\shoes-3.jpg" />
+    <Content Include="wwwroot\images\shoes-3.png" />
+    <Content Include="wwwroot\images\shoes-4.jpg" />
+    <Content Include="wwwroot\images\shoes-4.png" />
+    <Content Include="wwwroot\images\shoes-5.jpg" />
+    <Content Include="wwwroot\images\shoes-6.jpg" />
+    <Content Include="wwwroot\images\shoes-7.jpg" />
+    <Content Include="wwwroot\images\shoes-8.jpg" />
+    <Content Include="wwwroot\images\slct.png" />
+    <Content Include="wwwroot\images\star.png" />
+    <Content Include="wwwroot\images\subscribe-bg.jpg" />
+    <Content Include="wwwroot\images\thanks.jpg" />
+    <Content Include="wwwroot\images\truck.png" />
+    <Content Include="wwwroot\images\untitled folder\._bg copy 2.jpg" />
+    <Content Include="wwwroot\images\untitled folder\._bg copy.jpg" />
+    <Content Include="wwwroot\images\untitled folder\._bg.jpg" />
+    <Content Include="wwwroot\images\untitled folder\._colctn-1.jpg" />
+    <Content Include="wwwroot\images\untitled folder\bg copy 2.jpg" />
+    <Content Include="wwwroot\images\untitled folder\bg copy.jpg" />
+    <Content Include="wwwroot\images\untitled folder\bg.jpg" />
+    <Content Include="wwwroot\images\untitled folder\colctn-1.jpg" />
+    <Content Include="wwwroot\js\bootstrap.js" />
+    <Content Include="wwwroot\js\bootstrap.min.js" />
+    <Content Include="wwwroot\js\effects.js" />
+    <Content Include="wwwroot\js\jquery-1.11.3.js" />
+    <Content Include="wwwroot\js\jquery-3.1.1.min.js" />
+    <Content Include="wwwroot\js\jquery-select7.js" />
+    <Content Include="wwwroot\js\jquery.js" />
+    <Content Include="wwwroot\js\mensizecomponent.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_sharedLayout.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="wwwroot\fonts\.DS_Store" />
+    <Content Include="wwwroot\fonts\._.DS_Store" />
+    <Content Include="wwwroot\fonts\._fontawesome-webfont.eot" />
+    <Content Include="wwwroot\fonts\._fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\fonts\._fontawesome-webfont.woff" />
+    <Content Include="wwwroot\fonts\._fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\fonts\._FontAwesome.otf" />
+    <Content Include="wwwroot\fonts\._FuturaBT-MediumCondensed.woff" />
+    <Content Include="wwwroot\fonts\._FuturaBT-MediumCondensed.woff2" />
+    <Content Include="wwwroot\fonts\._FuturaStd-Medium.woff" />
+    <Content Include="wwwroot\fonts\._FuturaStd-Medium.woff2" />
+    <Content Include="wwwroot\fonts\._glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\fonts\._glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\fonts\._glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\fonts\._glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\fonts\._Limerick-Medium.woff" />
+    <Content Include="wwwroot\fonts\._Limerick-Medium.woff2" />
+    <Content Include="wwwroot\fonts\._SavoyeLetPlain.eot" />
+    <Content Include="wwwroot\fonts\._SavoyeLetPlain.ttf" />
+    <Content Include="wwwroot\fonts\._SavoyeLetPlain.woff" />
+    <Content Include="wwwroot\fonts\._SavoyeLetPlain.woff2" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\fonts\FuturaBT-MediumCondensed.woff" />
+    <Content Include="wwwroot\fonts\FuturaBT-MediumCondensed.woff2" />
+    <Content Include="wwwroot\fonts\FuturaStd-Medium.woff" />
+    <Content Include="wwwroot\fonts\FuturaStd-Medium.woff2" />
+    <Content Include="wwwroot\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\fonts\Limerick-Medium.woff" />
+    <Content Include="wwwroot\fonts\Limerick-Medium.woff2" />
+    <Content Include="wwwroot\fonts\SavoyeLetPlain.eot" />
+    <Content Include="wwwroot\fonts\SavoyeLetPlain.ttf" />
+    <Content Include="wwwroot\fonts\SavoyeLetPlain.woff" />
+    <Content Include="wwwroot\fonts\SavoyeLetPlain.woff2" />
+    <Content Include="wwwroot\images\.DS_Store" />
+    <Content Include="wwwroot\images\._.DS_Store" />
+    <Content Include="wwwroot\images\untitled folder\.DS_Store" />
+    <Content Include="wwwroot\images\untitled folder\._.DS_Store" />
+    <Content Include="Views\Authorize\SignIn.cshtml" />
+    <Content Include="Views\Authorize\SignUp.cshtml" />
+    <Content Include="Views\Authorize\NamePage.cshtml" />
+    <Content Include="Views\Authorize\postCode.cshtml" />
+    <Content Include="Views\Authorize\uk_mens_primary_objectives_component.cshtml" />
+    <Content Include="Views\Authorize\uk_height_component.cshtml" />
+    <Content Include="Views\Authorize\uk_weight_component.cshtml" />
+    <Content Include="Views\Authorize\uk_mens_size_component.cshtml" />
+    <Content Include="Views\Authorize\uk_mens_casual_shirts_style_component.cshtml" />
+    <Content Include="Views\Authorize\uk_mens_jeans_fit_component.cshtml" />
+    <Content Include="Views\Authorize\setDeliveryDate.cshtml" />
+    <Content Include="Views\Authorize\paymentMethod.cshtml" />
+    <Content Include="Views\Authorize\thanks.cshtml" />
+    <Content Include="Views\Authorize\type.cshtml" />
+    <Content Include="Views\Authorize\pricing.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64070</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44351/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

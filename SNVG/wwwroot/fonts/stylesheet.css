@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Limerick';
+    src: url('Limerick-Medium.woff2') format('woff2'),
+        url('Limerick-Medium.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+

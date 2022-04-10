@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_sharedLayout.cshtml";
+}
+
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <div class="center-1">
+            <style type="text/css">
+                .login-text-cntnr {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    padding: 100px 0;
+                }
+
+                #Login-page {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+                }
+
+                    #Login-page::before {
+                        position: absolute;
+                        bottom: -15px;
+                        width: 100%;
+                        left: 0;
+                        height: 15px;
+                        content: "";
+                        background-image: url(images/code.jpg/);
+                    }
+
+                .login-text-cntnr {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 auto;
+                    max-width: 415px;
+                    width: 100%;
+                }
+
+                    .login-text-cntnr input {
+                        margin-bottom: 15px;
+                        border-radius: 0;
+                        border: 2px solid #000;
+                    }
+
+                    .login-text-cntnr h2 {
+                        top: -100px;
+                        font-size: 40px;
+                        color: #333333;
+                        margin: 0;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+            </style>
+            <div id="Login-page" class="inner-page">
+
+                <div class="inner-page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="login-text-cntnr">
+                                <h2>Complete your style quiz</h2>
+                                <p>By continuing, you accept Stitch Fix's Terms of Use and acknowledge our Privacy Policy.</p>
+                                <form role="form">
+                                    <input autocomplete="off" class="form-control" name="" placeholder="Email Address" type="text">
+                                    <input autocomplete="off" class="form-control" name="" placeholder="Password" type="email">
+                                    <div class="dble-cntnr">
+                                        <a href="../Authorize/SignIn">Login</a>
+                                    </div>
+                                    <a href="../Authorize/NamePage">
+                                        <input autocomplete="off" class="form-control sbmt" name="" value="SIGN UP" type="button">
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

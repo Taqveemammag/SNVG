@@ -1,0 +1,351 @@
+*{margin: 0px;padding: 0px;}
+html,body {width: 100%;height: 100%;}
+
+/* Text Select */
+::-moz-selection { background:rgba(0,0,0,0.6) ; color:#fff ;}
+::-webkit-selection { background:rgba(0,0,0,0.6) ; color:#fff}
+::selection { background:rgba(0,0,0,0.6)  ; color:#fff ;}
+/* Text Select */
+
+input[type=text]::-moz-clear {display: none;}
+input[type=text]::-ms-clear {display: none;}
+a,
+a:focus{ outline: none;}
+::-ms-clear {display: none;}
+img{ -webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-o-user-select: none;user-select: none;}
+img{max-width: 100%;}
+/* Fonts */
+
+
+/*@font-face {
+    font-family: 'Futura MdCn BT';
+    src: url('../fonts/FuturaBT-MediumCondensed.woff2') format('woff2'),
+        url('../fonts/FuturaBT-MediumCondensed.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}*/
+@font-face {
+    font-family: 'Futura MdCn BT';
+    src: url('../fonts/FuturaStd-Medium.woff2') format('woff2'),
+        url('../fonts/FuturaStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Savoye LET';
+    src: url('../fonts/SavoyeLetPlain.eot');
+    src: url('../fonts/SavoyeLetPlain.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SavoyeLetPlain.woff2') format('woff2'),
+        url('../fonts/SavoyeLetPlain.woff') format('woff'),
+        url('../fonts/SavoyeLetPlain.ttf') format('truetype'),
+        url('../fonts/SavoyeLetPlain.svg#SavoyeLetPlain') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Limerick';
+    src: url('../fonts/Limerick-Medium.woff2') format('woff2'),
+        url('../fonts/Limerick-Medium.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.product-item-detail-txt .pagination-nav li a{
+  /*font-family: 'Futura MdCn BT';*/
+  font-family: 'Limerick';
+}
+/* Font Family */
+
+/* Color */
+
+/*p{
+  color: #5b5b5b;
+}*/
+.footer-btm-pnl ul li a:hover,
+.footer-mid ul li a:hover,
+.header-top a:hover,
+.header-top ul.sign-nav li a:hover,
+.header-top ul.sign-nav li a:hover,
+.header-top ul.sign-nav li .shiping-nav a:nth-last-child(1):hover,
+.tb-text-cntnr .checkbox a:hover,
+.dble-cntnr a:hover,
+.new-to-gigi a:hover,
+.product-side-bar label,
+.reg-nav li a:hover,
+.sort-by a:hover,
+.sort-by a:hover span,
+.help-tabs-nav li a,
+.cntry-pnl a:hover,
+.product-item-detail-txt h3,
+.product-item-detail-txt .dble-cntnr a:hover,
+.shpng-btn,
+.sizetab-nav-cntnr .sizetab-nav li a,
+#size-modal p,
+.global-size-cntnr p,
+.steps-pnl p,
+.reg-nav li select:hover,{
+  color: rgba(51,51,51,0.5);
+}
+
+.default-anchor:hover,
+.get-in-touch li a:hover,
+#contact-us h3,
+.help-tabs-nav li a:hover,
+.help-tabs-nav li.active a,
+.footer-mid h6,
+#checkout .inner-page-content h4,
+#checkout .chckt-txt h6,
+#checkout .chckt-txt ul li,
+#checkout .chckt-txt a,
+#registration .checkbox label,
+.subtotal h2,
+.international-shipping a,
+.biling-adres-panl-main h2,
+.biling-adres-panl-main h2 a,
+.shipment-order h5,
+.order-number h5,
+.shipment-order h4,
+.order-number h6,
+.order-number ul li,
+#Order-history h2,
+.lst-txt h3,
+.callender h6,
+.may-also-like h4,
+.like-pnl p,
+.cntry-pnl a,
+.product-item-detail-txt h2,
+.product-item-detail-txt h5,
+.size-nav li a:hover,
+.size-nav li label:hover,
+.product-item-detail-txt .dble-cntnr a,
+.shpng-btn:hover,
+.sizetab-nav-cntnr .sizetab-nav li a:hover,
+.sizetab-nav-cntnr .sizetab-nav li.active a,
+#size-modal h4,
+.fit-main-cntnr h3,
+.fit-main-cntnr h6,
+.global-size-cntnr h3,
+.steps-pnl h6,
+.step-size-nrml-nav li a:hover,
+.list-txt-pnl h2,
+.list-txt-pnl h3,
+.list-txt-pnl h5,
+.user-nav li p span,
+.user-nav li p,
+.user-nav li h6{
+  color:#333333;
+}
+
+.footer-mid ul li a{
+  color: #333333 !important;    
+}
+.header-top button:hover,
+.header-top button:focus,
+.header-top button:active{color: #fff !important}
+.reg-btn:hover,
+#registration input.registration-sbmt:hover,
+.header-bottom .icon-nav li #cart-menu  .submt-btn:hover{
+  background-color: #000;
+}
+.new-to-gigi a:hover{
+ background-color: #333333;
+ color: #fff;
+ border-color:#fff;
+}
+/* Social media */
+.fb,
+.fb:hover{
+  color:#465997; 
+}
+.twtr,
+.twtr:hover{
+  color:#78aaec;
+}
+.gogl-pls,
+.gogl-pls:hover{
+  color:#dc473a;
+}
+.lnkdn:hover{
+  color:#4375b3;
+}
+.vk:hover{
+  color:#5b74a2;
+}
+.srch:hover{
+  color:#000;
+}
+.yutbe:hover{
+  color: #b13824;
+}
+.sndcld:hover{
+  color:#dc4d16;
+}
+.instgrm:hover{
+  color:#c65160;
+}
+
+
+
+/* Table Cell Panel */
+.table-center{ 
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  margin: 0;
+  display:table;
+}
+.table-center-cell{  
+  height:100%;
+  width:100%;
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+/* Table Cell Panel */
+
+
+
+/* Transition */
+a,
+.bg-layer,
+.footer-top .sbmt,
+.colcton-pnl::before,
+.colcton-pnl,
+.star-bar,
+.bucket-bar,
+.carousel-indicators li,
+input.sbmt,
+.header-top .sprt button,
+.bucket-bar span,
+.star-bar span,
+.searchsbmt,
+#Subscribe-modal .close,
+#Subscribe-modal .sbscrb-sbmt,
+.sort-by a span,
+.colcton-pnl,
+#contact-us .contact-sbmit,
+#help .contact-sbmit,
+.help-tabs-nav li a::before,
+#registration input.registration-sbmt,
+#order-track input.reg-btn,
+.delivery-nav li,
+.color-choos-nav li a i,
+.sizetab-nav-cntnr .sizetab-nav li a::before,
+.steps-pnl,
+.header-bottom .icon-nav li #cart-menu  .submt-btn,
+.reg-nav li select,
+.proced-btn-cntnr input,
+.color-choos-nav li span i,
+.size-nav li label,
+#product-details input,
+.colcton-pnl svg{
+  -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+}
+/* Transition */
+
+
+/* Input Placeholder */
+#subscribe-modal .modal-content ::-webkit-input-placeholder { 
+  color: #fff !important;
+  font-family: 'Bariol-reguler';
+}
+#subscribe-modal .modal-content ::-moz-placeholder { 
+  color: #fff !important;
+  font-family: 'Bariol-reguler';
+}
+#subscribe-modal .modal-content :-ms-input-placeholder { 
+  color: #fff !important;
+  font-family: 'Bariol-reguler';
+}
+#subscribe-modal .modal-content :-moz-placeholder { 
+  color: #fff !important;
+  font-family: 'Bariol-reguler';
+}
+
+/* Iframe */
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* Form Focus */
+.form-control:focus {
+    border-color: #d6ccc2;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(214, 204, 194, 0.6);
+    outline: 0 none;
+}
+
+
+a{
+  text-decoration: none !important;
+}
+.bg-layer{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0.3;
+  top: 0;
+  height: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.footer-top .bg-layer{
+  opacity: 0.1;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.txt-centr{
+  text-align: center;
+}
+.empty-btn{
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 16px;
+  color: #333333;
+  border:2px solid #333333;
+  padding:8px 20px;
+}
+.empty-btn:hover{
+  color: #fff;
+  background: #000;
+  border-color: #fff;
+}
+.pd-off{
+  background: #fff;
+  padding: 0;
+} 
+
+.brdr{
+  border-left: 1px solid #dbd9d7;
+}
+.brdr-1{
+  border-right: 1px solid #dbd9d7;
+}
+.bdr-btm{
+  border-bottom: 3px solid #e5e5e5;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+}
+

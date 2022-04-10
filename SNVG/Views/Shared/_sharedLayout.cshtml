@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vindictus is an action-packed, Free-to-Play MMORPG. Enter a world beyond and experience gratifying real-time combat, epic monsters &amp;amp; glorious visuals.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="~/wwwroot/images/logo.png">
+
+    <!-- Title
+    ================== -->
+    <title>SNVG</title>
+
+
+    <!-- Css Attached Files
+    ========================= -->
+    <link href="~/wwwroot/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/wwwroot/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    Style Css
+    ==========================
+    <link rel="stylesheet" href="~/wwwroot/css/jquery-select7.css">
+    <link href="~/wwwroot/css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    @*<link href="~/wwwroot/css/" rel="stylesheet" type="text/css">*@
+
+    <link href="~/wwwroot/css/theme.css" rel="stylesheet" type="text/css">
+    <link href="~/wwwroot/css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!-- Meta Code
+    ============================ -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+</head>
+<body>
+    <div class="master-wrapper-page">
+        <!-- Header Starts Here
+        ======================= -->
+        <header>
+            <div class="header-top header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <!-- Contact Support Form -->
+                            <div class="dropdown sprt">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                    CONTACT SUPPORT
+                                    <span class="fa fa-angle-down"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <input type="text" autocomplete="off" class="form-control" name="" placeholder="Contact Name">
+                                            <input type="email" autocomplete="off" class="form-control" name="" placeholder="Email Address">
+                                            <input type="text" autocomplete="off" class="form-control" name="" placeholder="Contact Phone (optional)">
+                                            <select class="form-control" id="sel1">
+                                                <option>Select Option</option>
+                                                <option>any</option>
+                                                <option>first</option>
+                                                <option>last</option>
+                                            </select>
+                                            <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                                            <input type="submit" autocomplete="off" class="form-control sbmt" name="" value="Submit">
+                                        </div>
+                                    </form>
+                                </ul>
+                            </div>
+                            <!-- Contact Support Form -->
+                            <p>FREE SHIPPING – FREE RETURNS</p>
+                            <ul class="sign-nav">
+                                <li>@Html.ActionLink("Register", "SignUp", "Authorize")</li>
+                                <li>@Html.ActionLink("Login", "SignIn", "Authorize")</li>
+                                <li>
+
+                                    <!-- Shipping To Form -->
+                                    <div class="currency-selector">
+                                        <span id="flag"><img src="~/wwwroot/images/flag-1.jpg" alt="British"></span>
+                                        <select id="customerCurrency" class="select7 select7_dropdown" name="customerCurrency" onchange="setLocation(this.value);">
+                                            <option value="/changecurrency/1?returnurl=%2f">US Dollar</option>
+                                            <option selected="selected" value="/changecurrency/3?returnurl=%2f">British Pound</option>
+                                            <option value="/changecurrency/6?returnurl=%2f">Euro</option>
+                                        </select>
+                                    </div>
+                                    <!-- Shipping To Form -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom header-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <ul class="navigation">
+                                <li class="active"><a href="index.html">Home</a></li>
+
+                                <li class="men">
+                                    <!-- Men Menu -->
+                                    <div class="dropdown men-menu">
+                                        <a>Men <i class="fa fa-angle-down"></i></a>
+                                        <ul class="main-menu-drop-down">
+                                            <div class="main-menu-inner">
+                                                <div class="top-slid"></div>
+                                                <div class="col-md-8 col-sm-8 col-lg-8 left-menu-pnl">
+                                                    <div class="col-md-4 col-sm-4 col-lg-4 pd-off">
+                                                        <h2>Shoes</h2>
+                                                        <ul id="men-menu-navigation">
+                                                            <li><a href="catagory-details-3.html">All Shoes</a></li>
+                                                            <li><a href="catagory-details-3.html">Boots & Booties</a></li>
+                                                            <li><a href="catagory-details-3.html">Dress Shoes</a></li>
+                                                            <li><a href="catagory-details-3.html">Moccasins & Loafers</a></li>
+                                                            <li><a href="catagory-details-3.html">Oxfords & Derbys</a></li>
+                                                            <li><a href="catagory-details-3.html">Espadrilles</a></li>
+                                                            <li><a href="catagory-details-3.html">Sneakers</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-lg-4 pd-off">
+                                                        <h2>Accessories </h2>
+                                                        <ul id="men-menu-navigation">
+                                                            <li><a href="catagory-details-3.html">Backpacks, Briefcases, & Bags</a></li>
+                                                            <li><a href="catagory-details-3.html">Belts</a></li>
+                                                            <li><a href="catagory-details-3.html">Wallets</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-lg-4 banner-right" style="background-image: url(images/banner-1.jpg);">
+                                                    <div class="banner-txt">
+                                                        <h2>2018</h2>
+                                                        <p>Alto di moda basso prezzo</p>
+                                                        <h2>SALDI</h2>
+                                                        <p>Fino al 40% di sconto</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                        <!-- Men Menu -->
+
+                                </li>
+                                <li><a href="our-story.html">Our Story</a></li>
+                            </ul>
+                            <div class="logo-container">
+                                <a href="index.html"><img src="~/wwwroot/images/logo.png" style="width:70px"></a>
+                            </div>
+                            <ul class="icon-nav">
+                                <li>
+                                    <!-- Star Menu -->
+                                    <div class="dropdown star-menu">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-star"></i><span class="nmbr-cnt">2</span></button>
+                                        <div class="dropdown-menu" id="starmenu" role="menu" aria-labelledby="menu1">
+                                            <div class="form-group">
+                                                <h6>Recent Added</h6>
+                                                <!-- Recent added -->
+                                                <a href="javascript:void(0);" class="recent-added-pnl">
+                                                    <div class="img-pnl" style="background-image: url(~/wwwroot/images/recent-1.jpg);">
+                                                        <div class="like-star">
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recent-txt">
+                                                        <h4>BALENCIAGA</h4>
+                                                        <p>Arena giant studded leather sandals</p>
+                                                        <h3>£710.00</h3>
+                                                    </div>
+                                                </a>
+                                                <!-- Recent added -->
+                                                <!-- Recent added -->
+                                                <a href="javascript:void(0);" class="recent-added-pnl">
+                                                    <div class="img-pnl" style="background-image: url(~/wwwroot/images/recent-2.jpg);">
+                                                        <div class="like-star">
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recent-txt">
+                                                        <h4>BALENCIAGA</h4>
+                                                        <p>Arena giant studded leather sandals</p>
+                                                        <h3>£710.00</h3>
+                                                    </div>
+                                                </a>
+                                                <!-- Recent added -->
+                                                <!-- Recent added -->
+                                                <a href="javascript:void(0);" class="recent-added-pnl">
+                                                    <div class="img-pnl" style="background-image: url(~/wwwroot/images/recent-3.jpg);">
+                                                        <div class="like-star">
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="recent-txt">
+                                                        <h4>BALENCIAGA</h4>
+                                                        <p>Arena giant studded leather sandals</p>
+                                                        <h3>£710.00</h3>
+                                                    </div>
+                                                </a>
+                                                <!-- Recent added -->
+                                                <a href="wish-list.html" class="submt-btn">View all</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Star Menu -->
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#search-modal">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fa fa-shopping-bag"></i><span class="nmbr-cnt">2</span></a>
+                                    <!-- Cart Menu -->
+                                    <div id="cart-menu">
+                                        <div class="cart-menu-inner">
+                                            <h6>recently added</h6>
+                                            <!-- Add Panel -->
+                                            <div class="added-pnl">
+                                                <!-- Left -->
+                                                <div class="added-left-pnl">
+                                                    <img src="~/wwwroot/images/shoes-1.jpg">
+                                                    <div class="color-pnl">
+                                                        <p>color</p>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <!-- Left -->
+                                                <!-- Right -->
+                                                <div class="added-right-pnl">
+                                                    <h4>Fashionable Pretty</h4>
+                                                    <h3>£333.00</h3>
+                                                    <!-- Tabel info -->
+                                                    <div class="table-info">
+                                                        <div class="text-info">
+                                                            Item Siza
+                                                        </div>
+                                                        <div class="arrow">
+                                                            <select>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Tabel info -->
+                                                    <!-- Tabel info -->
+                                                    <div class="table-info">
+                                                        <div class="text-info">
+                                                            Item Quantity
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <input type="number" min="1" max="9" step="1" value="1">
+                                                        </div>
+                                                    </div>
+                                                    <!-- Tabel info -->
+                                                </div>
+                                            </div>
+                                            <!-- Add Panel -->
+                                            <!-- Add Panel -->
+                                            <div class="added-pnl">
+                                                <!-- Left -->
+                                                <div class="added-left-pnl">
+                                                    <img src="~/wwwroot/images/shoes-1.jpg">
+                                                    <div class="color-pnl">
+                                                        <p>color</p>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <!-- Left -->
+                                                <!-- Right -->
+                                                <div class="added-right-pnl">
+                                                    <h4>Fashionable Pretty</h4>
+                                                    <h3>£333.00</h3>
+                                                    <!-- Tabel info -->
+                                                    <div class="table-info">
+                                                        <div class="text-info">
+                                                            Item Siza
+                                                        </div>
+                                                        <div class="arrow">
+                                                            <select>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Tabel info -->
+                                                    <!-- Tabel info -->
+                                                    <div class="table-info">
+                                                        <div class="text-info">
+                                                            Item Quantity
+                                                        </div>
+                                                        <div class="quantity">
+                                                            <input type="number" min="1" max="9" step="1" value="1">
+                                                        </div>
+                                                    </div>
+                                                    <!-- Tabel info -->
+                                                </div>
+                                            </div>
+                                            <!-- Tabel info -->
+                                            <div class="sbttl">
+                                                <h2>Subtotal</h2>
+                                                <h3>$666.00</h3>
+                                            </div>
+                                            <div class="full-pnl">
+                                                <input type="submit" name="" class="submt-btn" value="check out">
+                                            </div>
+                                            <!-- Add Panel -->
+                                        </div>
+                                    </div>
+                                    <!-- Cart Menu -->
+
+                                </li>
+                                <li>
+                                    <!-- Log in Menu -->
+                                    <div class="dropdown menu">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                                        <ul class="dropdown-menu" id="menu-nav" role="menu" aria-labelledby="menu1">
+                                            <div class="form-group">
+                                                <li>@Html.ActionLink("Login", "SignIn", "Authorize")</li>
+                                                <li>@Html.ActionLink("Register", "SignUp", "Authorize")</li>
+                                                <li>
+                                                    <a href="javascript:void(0);">My Account</a>
+                                                    <ul>
+                                                        <li><a href="javascript:void(0);"><i class="fa fa-angle-right"></i> User Name</a></li>
+                                                        <li><a href="order-track.html"><i class="fa fa-angle-right"></i> My Order Status</a></li>
+                                                        <li><a href="order-history.html"><i class="fa fa-angle-right"></i> Order History</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="javascript:void(0);">Size Guide</a></li>
+                                                <li><a href="javascript:void(0);">Exchange & Returns</a></li>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                    <!-- Log in Menu -->
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- Header Ends Here
+        ======================= -->
+
+        @RenderBody()
+
+
+        <!-- Footer Starts Here
+        ======================= -->
+        <footer class="footer">
+            <!-- Footer Header -->
+            
+            <!-- Footer Top -->
+            <!-- Footer-middle -->
+            <div class="footer-mid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-lg-3 ">
+                            <h6>SNVG</h6>
+                            <ul>
+                                <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="javascript:void(0);">Our History</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-lg-3 bd">
+                            <h6>Customer Service</h6>
+                            <ul>
+                                <li><a href="help.html">Help</a></li>
+                                <li><a href="javascript:void(0);">Size Guide</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-lg-3 bd">
+                            <h6>Your Oder</h6>
+                            <ul>
+                                <li><a href="order-track.html">Order Status</a></li>
+                                <li><a href="javascript:void(0);">Exchanges & Returns</a></li>
+                                <li><a href="javascript:void(0);">Favorites</a></li>
+                                <li><a href="order-history.html">Order History</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-lg-3 bd">
+                            <h6>Policies</h6>
+                            <ul>
+                                <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="javascript:void(0);">Shipping Handling</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer-middle -->
+            <!-- Footer Bottom -->
+            <div class="footer-btm-pnl">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <p>&copy; Copyright,  2017-2022, SNVG. All Rights Reserved.</p>
+                            <ul class="ftr-social-nav">
+                                <li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                            <img src="~/wwwroot/images/card.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+            </div>
+        </footer>
+
+        <!-- Footer Ends Here
+        ====================== -->
+    </div>
+    <!-- Java Script Portion
+    ================================== -->
+    <!-- jQuery -->
+    <script src="~/wwwroot/js/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/wwwroot/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/wwwroot/js/effects.js"></script>
+
+    <!-- Carousile Load Js -->
+    <script>
+        $('.carousel').carousel({
+            interval: 50000000 //changes the speed
+        })
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#myTab a:first').tab('show')
+
+        })
+
+    </script>
+    <script type="text/javascript">
+        jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+        jQuery('.quantity').each(function () {
+            var spinner = jQuery(this),
+                input = spinner.find('input[type="number"]'),
+                btnUp = spinner.find('.quantity-up'),
+                btnDown = spinner.find('.quantity-down'),
+                min = input.attr('min'),
+                max = input.attr('max');
+
+            btnUp.click(function () {
+                var oldValue = parseFloat(input.val());
+                if (oldValue >= max) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+            btnDown.click(function () {
+                var oldValue = parseFloat(input.val());
+                if (oldValue <= min) {
+                    var newVal = oldValue;
+                } else {
+                    var newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+        });
+    </script>
+    <script>
+        function example_select7_template_option(option) {
+            r = "<i>" + option.title + "</i>"
+            if (option.someOptionText) r += " <b>" + option.someOptionText + "</b>"
+            return r
+        }
+        function example_select7_template_optgroup(optgroup) {
+            r = "<i>" + optgroup.title + "</i>"
+            if (optgroup.someOptgroupText) r += " <b>" + optgroup.someOptgroupText + "</b>"
+            return r
+        }
+        function example_select7_template_current(option) {
+            r = "<i>" + option.title + "</i>"
+            if (option.someCurrentText) r += " <b>" + option.someCurrentText + "</b>"
+            return r
+        }
+    </script>
+
+    <script src="js/jquery-select7.js"></script>
+    <script>
+        $(".select7").select7()
+    </script>
+</body>
+</html>

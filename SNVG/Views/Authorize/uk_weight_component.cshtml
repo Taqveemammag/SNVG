@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "uk_weight_component";
+    Layout = "~/Views/Shared/_sharedLayout.cshtml";
+}
+
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <div class="center-1">
+            <style type="text/css">
+                .login-text-cntnr {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    padding: 100px 0;
+                }
+
+                #Login-page {
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+                    text-align: center;
+                }
+
+                    #Login-page::before {
+                        position: absolute;
+                        bottom: -15px;
+                        width: 100%;
+                        left: 0;
+                        height: 15px;
+                        content: "";
+                        background-image: url(images/code.jpg/);
+                    }
+
+                .login-text-cntnr {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 auto;
+                    max-width: 415px;
+                    width: 100%;
+                }
+
+                    .login-text-cntnr input {
+                        margin-bottom: 15px;
+                        border-radius: 0;
+                        border: 2px solid #000;
+                    }
+
+                    .login-text-cntnr h2 {
+                        top: -100px;
+                        font-size: 40px;
+                        color: #333333;
+                        margin: 0;
+                        text-transform: uppercase;
+                        margin-bottom: 40px;
+                    }
+
+                #kilograms {
+                    width: 60px;
+                    height: 40px;
+                    padding-left: 10px;
+                    margin-right: 5px;
+                    margin-top: 20px
+                }
+            </style>
+            <div id="Login-page" class="inner-page">
+
+                <div class="inner-page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="login-text-cntnr">
+                                <h3>What is your weight?</h3>
+                                <form role="form">
+                                    <label for="kilograms">
+                                        <input max="453" min="5" pattern="\d*" type="number" id="kilograms" name="imperial_weight" style="">kilograms
+                                    </label>
+                                    <a href="../Authorize/uk_mens_size_component">
+                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
+                                    </a>
+                                    <input autocomplete="off" style="border:hidden; background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
