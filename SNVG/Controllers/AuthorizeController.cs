@@ -17,6 +17,7 @@ namespace SNVG.Controllers
         {
             return View();
         }
+
         public ActionResult NamePage()
         {
             return View();
