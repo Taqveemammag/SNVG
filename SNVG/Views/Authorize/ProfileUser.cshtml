@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_sharedLayout.cshtml";
+}
+
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <div class="center-1">
+
+            <!-- Inner Page Starts Here
+            =========================== -->
+            <div id="profile" class="inner-page">
+                <!-- Bredcrums -->
+                <div class="bred-crums">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <ul class="bred-crums-nav">
+                                    <li class="profile"><a href="javascript:void(0);">Profile</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bredcrums -->
+                <div class="inner-page-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <h1>Profile</h1>
+                                <h6>Welcome!</h6>
+                                <h2>@ViewBag.account.Name</h2>
+                            </div>
+                            <div class="full basic-pymnt-pnl">
+                                <div class="col-ms-6 col-sm-6 col-lg-6 basic-info">
+                                    <h5>Basic Information</h5>
+                                    <ul>
+                                        <li>First Name<span>@ViewBag.account.Name</span></li>
+                                        <li>Last Name<span>@ViewBag.account.LastName</span></li>
+                                        <li>Email<span>@ViewBag.account.Email</span></li>
+                                        <li>Address<span>@ViewBag.account.Address</span></li>
+                                        <li>Post Code<span>@ViewBag.account.Postcode</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-ms-6 col-sm-6 col-lg-6 payment-mthd">
+                                    <h5>Payment mathod</h5>
+                                    <ul>
+                                        <li>Cash On Delivery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Inner Page Ends Here
+            ========================= -->
+        </div>
+    </div>
+</div>

@@ -276,7 +276,7 @@ header {
 
 .header-top .dropdown-menu input.sbmt,
 input.sbmt {
-	border: hidden;
+	border: hidden !important;
 	background-color: #333333;
 	text-transform: uppercase;
 	color: #fff;
@@ -285,7 +285,7 @@ input.sbmt {
 
 	.header-top .dropdown-menu input.sbmt:hover,
 	.sbmt:hover {
-		background: #007871;
+		background: #b399c6;
 	}
 
 .header-top ul.sign-nav li .shiping-nav a {
@@ -1733,8 +1733,8 @@ footer {
 	}
 
 		.footer-top .sbmt:hover {
-			background-color: #007871;
-			color: #007871;
+			background-color: #b399c6;
+			color: #b399c6;
 		}
 
 	.footer-top label {
@@ -5110,50 +5110,6 @@ footer {
 	color: #fff;
 }
 /* Hisotry Details */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

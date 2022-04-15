@@ -55,7 +55,7 @@
                         margin-bottom: 40px;
                     }
 
-                #kilograms {
+                .kilograms {
                     width: 60px;
                     height: 40px;
                     padding-left: 10px;
@@ -70,14 +70,12 @@
                         <div class="row">
                             <div class="login-text-cntnr">
                                 <h3>What is your weight?</h3>
-                                <form role="form">
+                                <form method="post" action="WeightComponent">
                                     <label for="kilograms">
-                                        <input max="453" min="5" pattern="\d*" type="number" id="kilograms" name="imperial_weight" style="">kilograms
+                                        @Html.TextBox("weight", "", new { @class = "kilograms", autocomplete = "off", requird = "Required" })
+                                        kilograms
                                     </label>
-                                    <a href="../Authorize/uk_mens_size_component">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="border:hidden; background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>

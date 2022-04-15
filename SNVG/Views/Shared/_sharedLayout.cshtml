@@ -95,7 +95,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-lg-12">
                             <ul class="navigation">
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active">@Html.ActionLink("Home", "Home", "Home")</li>
 
                                 <li class="men">
                                     <!-- Men Menu -->
@@ -108,25 +108,25 @@
                                                     <div class="col-md-4 col-sm-4 col-lg-4 pd-off">
                                                         <h2>Shoes</h2>
                                                         <ul id="men-menu-navigation">
-                                                            <li><a href="catagory-details-3.html">All Shoes</a></li>
-                                                            <li><a href="catagory-details-3.html">Boots & Booties</a></li>
-                                                            <li><a href="catagory-details-3.html">Dress Shoes</a></li>
-                                                            <li><a href="catagory-details-3.html">Moccasins & Loafers</a></li>
-                                                            <li><a href="catagory-details-3.html">Oxfords & Derbys</a></li>
-                                                            <li><a href="catagory-details-3.html">Espadrilles</a></li>
-                                                            <li><a href="catagory-details-3.html">Sneakers</a></li>
+                                                            <li><a href="#">All Shoes</a></li>
+                                                            <li><a href="#">Boots & Booties</a></li>
+                                                            <li><a href="#">Dress Shoes</a></li>
+                                                            <li><a href="#">Moccasins & Loafers</a></li>
+                                                            <li><a href="#">Oxfords & Derbys</a></li>
+                                                            <li><a href="#">Espadrilles</a></li>
+                                                            <li><a href="#">Sneakers</a></li>
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-4 col-sm-4 col-lg-4 pd-off">
                                                         <h2>Accessories </h2>
                                                         <ul id="men-menu-navigation">
-                                                            <li><a href="catagory-details-3.html">Backpacks, Briefcases, & Bags</a></li>
-                                                            <li><a href="catagory-details-3.html">Belts</a></li>
-                                                            <li><a href="catagory-details-3.html">Wallets</a></li>
+                                                            <li><a href="#">Backpacks, Briefcases, & Bags</a></li>
+                                                            <li><a href="#">Belts</a></li>
+                                                            <li><a href="#">Wallets</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 col-sm-4 col-lg-4 banner-right" style="background-image: url(images/banner-1.jpg);">
+                                                <div class="col-md-4 col-sm-4 col-lg-4 banner-right" style="background-image: url(/wwwroot/images/banner-1.jpg);">
                                                     <div class="banner-txt">
                                                         <h2>2018</h2>
                                                         <p>Alto di moda basso prezzo</p>
@@ -139,7 +139,7 @@
                                         <!-- Men Menu -->
 
                                 </li>
-                                <li><a href="our-story.html">Our Story</a></li>
+                                <li><a href="#">Our Story</a></li>
                             </ul>
                             <div class="logo-container">
                                 <a href="index.html"><img src="~/wwwroot/images/logo.png" style="width:70px"></a>
@@ -162,7 +162,6 @@
                                                     <div class="recent-txt">
                                                         <h4>BALENCIAGA</h4>
                                                         <p>Arena giant studded leather sandals</p>
-                                                        <h3>£710.00</h3>
                                                     </div>
                                                 </a>
                                                 <!-- Recent added -->
@@ -176,7 +175,6 @@
                                                     <div class="recent-txt">
                                                         <h4>BALENCIAGA</h4>
                                                         <p>Arena giant studded leather sandals</p>
-                                                        <h3>£710.00</h3>
                                                     </div>
                                                 </a>
                                                 <!-- Recent added -->
@@ -190,7 +188,6 @@
                                                     <div class="recent-txt">
                                                         <h4>BALENCIAGA</h4>
                                                         <p>Arena giant studded leather sandals</p>
-                                                        <h3>£710.00</h3>
                                                     </div>
                                                 </a>
                                                 <!-- Recent added -->
@@ -225,7 +222,6 @@
                                                 <!-- Right -->
                                                 <div class="added-right-pnl">
                                                     <h4>Fashionable Pretty</h4>
-                                                    <h3>£333.00</h3>
                                                     <!-- Tabel info -->
                                                     <div class="table-info">
                                                         <div class="text-info">
@@ -268,7 +264,6 @@
                                                 <!-- Right -->
                                                 <div class="added-right-pnl">
                                                     <h4>Fashionable Pretty</h4>
-                                                    <h3>£333.00</h3>
                                                     <!-- Tabel info -->
                                                     <div class="table-info">
                                                         <div class="text-info">
@@ -299,7 +294,6 @@
                                             <!-- Tabel info -->
                                             <div class="sbttl">
                                                 <h2>Subtotal</h2>
-                                                <h3>$666.00</h3>
                                             </div>
                                             <div class="full-pnl">
                                                 <input type="submit" name="" class="submt-btn" value="check out">
@@ -318,14 +312,6 @@
                                             <div class="form-group">
                                                 <li>@Html.ActionLink("Login", "SignIn", "Authorize")</li>
                                                 <li>@Html.ActionLink("Register", "SignUp", "Authorize")</li>
-                                                <li>
-                                                    <a href="javascript:void(0);">My Account</a>
-                                                    <ul>
-                                                        <li><a href="javascript:void(0);"><i class="fa fa-angle-right"></i> User Name</a></li>
-                                                        <li><a href="order-track.html"><i class="fa fa-angle-right"></i> My Order Status</a></li>
-                                                        <li><a href="order-history.html"><i class="fa fa-angle-right"></i> Order History</a></li>
-                                                    </ul>
-                                                </li>
                                                 <li><a href="javascript:void(0);">Size Guide</a></li>
                                                 <li><a href="javascript:void(0);">Exchange & Returns</a></li>
                                             </div>
@@ -360,33 +346,33 @@
                         <div class="col-md-3 col-sm-6 col-lg-3 ">
                             <h6>SNVG</h6>
                             <ul>
-                                <li><a href="our-story.html">Our Story</a></li>
-                                <li><a href="javascript:void(0);">Our History</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="#">Our Story</a></li>
+                                <li><a href="#">Our History</a></li>
+                                <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 col-lg-3 bd">
                             <h6>Customer Service</h6>
                             <ul>
-                                <li><a href="help.html">Help</a></li>
-                                <li><a href="javascript:void(0);">Size Guide</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Size Guide</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 col-lg-3 bd">
                             <h6>Your Oder</h6>
                             <ul>
-                                <li><a href="order-track.html">Order Status</a></li>
-                                <li><a href="javascript:void(0);">Exchanges & Returns</a></li>
-                                <li><a href="javascript:void(0);">Favorites</a></li>
-                                <li><a href="order-history.html">Order History</a></li>
+                                <li><a href="#">Order Status</a></li>
+                                <li><a href="#">Exchanges & Returns</a></li>
+                                <li><a href="#">Favorites</a></li>
+                                <li><a href="#">Order History</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 col-lg-3 bd">
                             <h6>Policies</h6>
                             <ul>
-                                <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                <li><a href="javascript:void(0);">Shipping Handling</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Shipping Handling</a></li>
                             </ul>
                         </div>
                     </div>

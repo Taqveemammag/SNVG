@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SNVGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SNVGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="Id" />
@@ -26,6 +26,93 @@
           <Property Name="DeliveryDate" Type="datetime" />
           <Property Name="Paymentmethod" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="JeansFit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="Skinny" Type="bit" />
+          <Property Name="Slim" Type="bit" />
+          <Property Name="Straight" Type="bit" />
+          <Property Name="Relaxed" Type="bit" />
+        </EntityType>
+        <EntityType Name="MenSize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Shirt" Type="varchar" MaxLength="50" />
+          <Property Name="Collar" Type="varchar" MaxLength="50" />
+          <Property Name="Blazer" Type="varchar" MaxLength="50" />
+          <Property Name="Bottom" Type="varchar" MaxLength="50" />
+          <Property Name="Waist" Type="varchar" MaxLength="50" />
+          <Property Name="InsideLeg" Type="varchar" MaxLength="50" />
+          <Property Name="Shoe" Type="varchar" MaxLength="50" />
+          <Property Name="AccountId" Type="int" />
+        </EntityType>
+        <EntityType Name="OutfitsDesigns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="Style1" Type="bit" />
+          <Property Name="Style2" Type="bit" />
+          <Property Name="Style3" Type="bit" />
+          <Property Name="Style4" Type="bit" />
+          <Property Name="Style5" Type="bit" />
+          <Property Name="Style6" Type="bit" />
+          <Property Name="Style7" Type="bit" />
+          <Property Name="Style8" Type="bit" />
+          <Property Name="Style9" Type="bit" />
+          <Property Name="Style10" Type="bit" />
+          <Property Name="Style11" Type="bit" />
+          <Property Name="Style12" Type="bit" />
+          <Property Name="Style13" Type="bit" />
+          <Property Name="Style14" Type="bit" />
+          <Property Name="Style15" Type="bit" />
+          <Property Name="Style16" Type="bit" />
+        </EntityType>
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="CardName" Type="varchar" MaxLength="50" />
+          <Property Name="CardNumber" Type="varchar" MaxLength="50" />
+          <Property Name="postcode" Type="varchar" MaxLength="50" />
+          <Property Name="cvv" Type="varchar" MaxLength="50" />
+          <Property Name="ExpiryDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Pricing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="Shirts" Type="varchar" MaxLength="50" />
+          <Property Name="TeesAndPolos" Type="varchar" MaxLength="50" />
+          <Property Name="JumpersAndSweatShirts" Type="varchar" MaxLength="50" />
+          <Property Name="TrouserAndJeans" Type="varchar" MaxLength="50" />
+          <Property Name="Shorts" Type="varchar" MaxLength="50" />
+          <Property Name="BlazersAndJackets" Type="varchar" MaxLength="50" />
+          <Property Name="Coats" Type="varchar" MaxLength="50" />
+          <Property Name="Shoes" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PrimaryComponents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TryNew" Type="bit" />
+          <Property Name="DiscoverNewTrend" Type="bit" />
+          <Property Name="SaveTime" Type="bit" />
+          <Property Name="ExpertAdvice" Type="bit" />
+          <Property Name="AccesstoExclusiveBrands" Type="bit" />
+          <Property Name="AccountId" Type="int" />
+        </EntityType>
         <EntityType Name="Product">
           <Key>
             <PropertyRef Name="Id" />
@@ -36,12 +123,27 @@
           <Property Name="Category" Type="varchar" MaxLength="50" />
           <Property Name="Image" Type="varchar" MaxLength="500" />
         </EntityType>
+        <EntityType Name="ShirtStyle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountId" Type="int" />
+          <Property Name="Slim" Type="bit" />
+          <Property Name="Regulat" Type="bit" />
+        </EntityType>
         <EntityContainer Name="SNVGModelStoreContainer">
           <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JeansFit" EntityType="Self.JeansFit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MenSize" EntityType="Self.MenSize" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OutfitsDesigns" EntityType="Self.OutfitsDesigns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PaymentMethod" EntityType="Self.PaymentMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pricing" EntityType="Self.Pricing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrimaryComponents" EntityType="Self.PrimaryComponents" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShirtStyle" EntityType="Self.ShirtStyle" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SNVGModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -79,7 +181,110 @@
         <EntityContainer Name="SNVGEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="PrimaryComponents" EntityType="SNVGModel.PrimaryComponent" />
+          <EntitySet Name="MenSizes" EntityType="SNVGModel.MenSize" />
+          <EntitySet Name="ShirtStyles" EntityType="SNVGModel.ShirtStyle" />
+          <EntitySet Name="JeansFits" EntityType="SNVGModel.JeansFit" />
+          <EntitySet Name="OutfitsDesigns" EntityType="SNVGModel.OutfitsDesign" />
+          <EntitySet Name="Pricings" EntityType="SNVGModel.Pricing" />
+          <EntitySet Name="PaymentMethods" EntityType="SNVGModel.PaymentMethod" />
         </EntityContainer>
+        <EntityType Name="PrimaryComponent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TryNew" Type="Boolean" />
+          <Property Name="DiscoverNewTrend" Type="Boolean" />
+          <Property Name="SaveTime" Type="Boolean" />
+          <Property Name="ExpertAdvice" Type="Boolean" />
+          <Property Name="AccesstoExclusiveBrands" Type="Boolean" />
+          <Property Name="AccountId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MenSize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Shirt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Collar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Blazer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Bottom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Waist" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="InsideLeg" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shoe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ShirtStyle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="Slim" Type="Boolean" />
+          <Property Name="Regulat" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="JeansFit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="Skinny" Type="Boolean" />
+          <Property Name="Slim" Type="Boolean" />
+          <Property Name="Straight" Type="Boolean" />
+          <Property Name="Relaxed" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="OutfitsDesign">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="Style1" Type="Boolean" />
+          <Property Name="Style2" Type="Boolean" />
+          <Property Name="Style3" Type="Boolean" />
+          <Property Name="Style4" Type="Boolean" />
+          <Property Name="Style5" Type="Boolean" />
+          <Property Name="Style6" Type="Boolean" />
+          <Property Name="Style7" Type="Boolean" />
+          <Property Name="Style8" Type="Boolean" />
+          <Property Name="Style9" Type="Boolean" />
+          <Property Name="Style10" Type="Boolean" />
+          <Property Name="Style11" Type="Boolean" />
+          <Property Name="Style12" Type="Boolean" />
+          <Property Name="Style13" Type="Boolean" />
+          <Property Name="Style14" Type="Boolean" />
+          <Property Name="Style15" Type="Boolean" />
+          <Property Name="Style16" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Pricing">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="Shirts" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TeesAndPolos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JumpersAndSweatShirts" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrouserAndJeans" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shorts" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BlazersAndJackets" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coats" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shoes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PaymentMethod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountId" Type="Int32" />
+          <Property Name="CardName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CardNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="postcode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cvv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -116,6 +321,109 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Category" ColumnName="Category" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrimaryComponents">
+            <EntityTypeMapping TypeName="SNVGModel.PrimaryComponent">
+              <MappingFragment StoreEntitySet="PrimaryComponents">
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="AccesstoExclusiveBrands" ColumnName="AccesstoExclusiveBrands" />
+                <ScalarProperty Name="ExpertAdvice" ColumnName="ExpertAdvice" />
+                <ScalarProperty Name="SaveTime" ColumnName="SaveTime" />
+                <ScalarProperty Name="DiscoverNewTrend" ColumnName="DiscoverNewTrend" />
+                <ScalarProperty Name="TryNew" ColumnName="TryNew" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MenSizes">
+            <EntityTypeMapping TypeName="SNVGModel.MenSize">
+              <MappingFragment StoreEntitySet="MenSize">
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Shoe" ColumnName="Shoe" />
+                <ScalarProperty Name="InsideLeg" ColumnName="InsideLeg" />
+                <ScalarProperty Name="Waist" ColumnName="Waist" />
+                <ScalarProperty Name="Bottom" ColumnName="Bottom" />
+                <ScalarProperty Name="Blazer" ColumnName="Blazer" />
+                <ScalarProperty Name="Collar" ColumnName="Collar" />
+                <ScalarProperty Name="Shirt" ColumnName="Shirt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShirtStyles">
+            <EntityTypeMapping TypeName="SNVGModel.ShirtStyle">
+              <MappingFragment StoreEntitySet="ShirtStyle">
+                <ScalarProperty Name="Regulat" ColumnName="Regulat" />
+                <ScalarProperty Name="Slim" ColumnName="Slim" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JeansFits">
+            <EntityTypeMapping TypeName="SNVGModel.JeansFit">
+              <MappingFragment StoreEntitySet="JeansFit">
+                <ScalarProperty Name="Relaxed" ColumnName="Relaxed" />
+                <ScalarProperty Name="Straight" ColumnName="Straight" />
+                <ScalarProperty Name="Slim" ColumnName="Slim" />
+                <ScalarProperty Name="Skinny" ColumnName="Skinny" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OutfitsDesigns">
+            <EntityTypeMapping TypeName="SNVGModel.OutfitsDesign">
+              <MappingFragment StoreEntitySet="OutfitsDesigns">
+                <ScalarProperty Name="Style16" ColumnName="Style16" />
+                <ScalarProperty Name="Style15" ColumnName="Style15" />
+                <ScalarProperty Name="Style14" ColumnName="Style14" />
+                <ScalarProperty Name="Style13" ColumnName="Style13" />
+                <ScalarProperty Name="Style12" ColumnName="Style12" />
+                <ScalarProperty Name="Style11" ColumnName="Style11" />
+                <ScalarProperty Name="Style10" ColumnName="Style10" />
+                <ScalarProperty Name="Style9" ColumnName="Style9" />
+                <ScalarProperty Name="Style8" ColumnName="Style8" />
+                <ScalarProperty Name="Style7" ColumnName="Style7" />
+                <ScalarProperty Name="Style6" ColumnName="Style6" />
+                <ScalarProperty Name="Style5" ColumnName="Style5" />
+                <ScalarProperty Name="Style4" ColumnName="Style4" />
+                <ScalarProperty Name="Style3" ColumnName="Style3" />
+                <ScalarProperty Name="Style2" ColumnName="Style2" />
+                <ScalarProperty Name="Style1" ColumnName="Style1" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pricings">
+            <EntityTypeMapping TypeName="SNVGModel.Pricing">
+              <MappingFragment StoreEntitySet="Pricing">
+                <ScalarProperty Name="Shoes" ColumnName="Shoes" />
+                <ScalarProperty Name="Coats" ColumnName="Coats" />
+                <ScalarProperty Name="BlazersAndJackets" ColumnName="BlazersAndJackets" />
+                <ScalarProperty Name="Shorts" ColumnName="Shorts" />
+                <ScalarProperty Name="TrouserAndJeans" ColumnName="TrouserAndJeans" />
+                <ScalarProperty Name="JumpersAndSweatShirts" ColumnName="JumpersAndSweatShirts" />
+                <ScalarProperty Name="TeesAndPolos" ColumnName="TeesAndPolos" />
+                <ScalarProperty Name="Shirts" ColumnName="Shirts" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentMethods">
+            <EntityTypeMapping TypeName="SNVGModel.PaymentMethod">
+              <MappingFragment StoreEntitySet="PaymentMethod">
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="cvv" ColumnName="cvv" />
+                <ScalarProperty Name="postcode" ColumnName="postcode" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="CardName" ColumnName="CardName" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

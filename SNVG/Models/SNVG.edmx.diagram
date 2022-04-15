@@ -4,9 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="343f0330ad9343cab22781e3c83fec7b" Name="Diagram1">
+      <Diagram DiagramId="343f0330ad9343cab22781e3c83fec7b" Name="Diagram1" ZoomLevel="93">
         <EntityTypeShape EntityType="SNVGModel.Account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SNVGModel.Product" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SNVGModel.PrimaryComponent" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="SNVGModel.MenSize" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SNVGModel.ShirtStyle" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="SNVGModel.JeansFit" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SNVGModel.OutfitsDesign" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SNVGModel.Pricing" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="SNVGModel.PaymentMethod" Width="1.5" PointX="5.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -54,6 +54,20 @@
                         text-transform: uppercase;
                         margin-bottom: 40px;
                     }
+
+                .feet-Input {
+                    width: 50px;
+                    height: 40px;
+                    padding-left: 5px;
+                    margin-right: 5px;
+                }
+
+                .inches-input {
+                    width: 50px;
+                    height: 40px;
+                    padding-left: 5px;
+                    margin-right: 5px;
+                }
             </style>
             <div id="Login-page" class="inner-page">
 
@@ -62,13 +76,16 @@
                         <div class="row">
                             <div class="login-text-cntnr">
                                 <h2>How tall are you?</h2>
-                                <form role="form">
-                                    <label for="feet"><input max="6" min="3" pattern="\d*" type="number" id="feet" name="imperial_height" class="Input___style-module__input___a43T4 " style="width:50px; height:40px; padding-left:5px; margin-right: 5px;">ft.</label>
-                                    <label for="inches"><input max="11" min="0" pattern="\d*" type="number" id="inches" name="imperial_height" class="Input___style-module__input___a43T4 " style="width:50px; height:40px; padding-left:5px; margin-right: 5px;">in.</label>
-                                    <a href="../Authorize/uk_weight_component">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="background:none; border:hidden" name="" value="Already have an Account? Sign In" type="submit">
+                                <form method="post" action="Height">
+                                    <label for="feet">
+                                        @Html.TextBox("feet", "", new { @class = "feet-Input", autocomplete = "off", requird = "Required" })
+                                        ft.
+                                    </label>
+                                    <label for="inches">
+                                        @Html.TextBox("inches", "", new { @class = "inches-input", autocomplete = "off", requird = "Required" })
+                                        in.
+                                    </label>
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>

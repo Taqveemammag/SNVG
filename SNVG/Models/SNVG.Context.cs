@@ -27,5 +27,12 @@ namespace SNVG.Models
     
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<PrimaryComponent> PrimaryComponents { get; set; }
+        public virtual DbSet<MenSize> MenSizes { get; set; }
+        public virtual DbSet<ShirtStyle> ShirtStyles { get; set; }
+        public virtual DbSet<JeansFit> JeansFits { get; set; }
+        public virtual DbSet<OutfitsDesign> OutfitsDesigns { get; set; }
+        public virtual DbSet<Pricing> Pricings { get; set; }
+        public virtual DbSet<PaymentMethod> PaymentMethods { get; set; }
     }
 }

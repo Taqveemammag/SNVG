@@ -3,7 +3,7 @@
     ViewBag.Title = "pricing";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
-
+<link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
         <div class="center-1">
@@ -12,7 +12,6 @@
                     display: inline-block;
                     width: 100%;
                     position: relative;
-                    padding: 100px 0;
                 }
 
                 #Login-page {
@@ -61,27 +60,94 @@
                     <div class="container">
                         <div class="row">
                             <div class="login-text-cntnr">
-                                <h2>What is your Name?</h2>
-                                <form role="form">
+                                <h3>How much are you willing to spend on the following items?</h3>
+                                <form method="post" action="pricing">
                                     <div class="StyleSurveyPage___style-module__style-survey-container___GBFPC StyleSurveyContainer___style-module__style-survey-container___5uLtn" data-page-name="uk_mens_spendiness">
-                                        <div>
-                                            <div class="NavigationCaretHeader___style-module__container___Z8SM7">
-                                                <div class="NavigationCaretHeader___style-module__container-inner___xxCP-">
-                                                    <span class="NavigationCaretHeader___style-module__navigation-caret___jPY8Q NavigationCaretHeader___style-module__left-navigation-caret___50GM9" data-test="left-nav-caret">
-                                                        <button type="button" class="NavigationCaretHeader___style-module__nav-button___P-mXb" title="previous page">
-                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#515762" class="" id="caret-previous" alt="Previous page">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4876 4.92879C15.8781 4.53826 15.8781 3.9051 15.4876 3.51457C15.0971 3.12405 14.4639 3.12405 14.0734 3.51457C9.29773 8.29025 7.20662 10.3814 6.29298 11.295C5.90246 11.6855 5.90228 12.3138 6.29281 12.7043C7.2056 13.6171 9.29566 15.7072 14.0736 20.4851C14.4641 20.8757 15.0973 20.8757 15.4878 20.4851C15.8783 20.0946 15.8783 19.4614 15.4878 19.0709L8.41665 11.9998L15.4876 4.92879Z" fill="currentColor"></path>
-                                                            </svg>
-                                                        </button>
-                                                    </span><span class="NavigationCaretHeader___style-module__navigation-caret___jPY8Q NavigationCaretHeader___style-module__right-navigation-caret___aDbbQ" data-test="right-nav-caret"><button type="button" class="NavigationCaretHeader___style-module__nav-button___P-mXb" title="next page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#515762" class="" id="caret-next" alt="Next page"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.51238 4.92879C8.12185 4.53826 8.12185 3.9051 8.51238 3.51457C8.9029 3.12405 9.53607 3.12405 9.92659 3.51457C14.7023 8.29025 16.7934 10.3814 17.707 11.295C18.0975 11.6855 18.0977 12.3138 17.7072 12.7043C16.7944 13.6171 14.7043 15.7072 9.9264 20.4851C9.53587 20.8757 8.90271 20.8757 8.51218 20.4851C8.12166 20.0946 8.12166 19.4614 8.51218 19.0709L15.5834 11.9998L8.51238 4.92879Z" fill="currentColor"></path></svg></button></span>
-                                                </div>
+                                        <div class="MultiSelectPage___style-module__multi-select-vertical___pFE8c">
+                                            <h1 class="Text___text-module__title-large___P1x0K_kfi QuestionPrompt___style-module__prompt___MFxmU" style="color: rgb(37, 40, 45); text-align: center;">
+                                            </h1>
+                                            <div class="MultiSelectPage___style-module__mens_spendiness___HOm--">
+                                                <label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_button_up_shirts">Shirts</label>
+                                                <select id="uk_mens_onboarding_spendiness_button_up_shirts" class="Select___style-module__select___KGPHN" name="shirts" required>
+                                                    <option value="">--</option>
+                                                    <option value="3500,4000">£35 to £40</option>
+                                                    <option value="4000,5000">£40 to £50</option>
+                                                    <option value="5000,7500">£50 to £75</option>
+                                                    <option value="7500,10000">£75 to £100</option>
+                                                    <option value="10000,">£100+</option>
+                                                </select>
+                                                <label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_tees_polos">
+                                                    Tees &amp; Polos
+                                                </label>
+                                                <select id="uk_mens_onboarding_spendiness_tees_polos" class="Select___style-module__select___KGPHN" name="tees" required>
+                                                    <option value="">--</option>
+                                                    <option value="2500,3500">£25 to £35</option>
+                                                    <option value="3500,4500">£35 to £45</option>
+                                                    <option value="4500,6000">£45 to £60</option>
+                                                    <option value="6000,7500">£60 to £75</option>
+                                                    <option value="7500,">£75+</option>
+                                                </select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_sweaters_sweatshirts">
+                                                    Jumpers &amp; Sweatshirts
+                                                </label>
+                                                <select id="uk_mens_onboarding_spendiness_sweaters_sweatshirts" class="Select___style-module__select___KGPHN" name="jumpers" required>
+                                                    <option value="">--</option>
+                                                    <option value="3500,4500">£35 to £45</option>
+                                                    <option value="4500,6000">£45 to £60</option>
+                                                    <option value="6000,7500">£60 to £75</option>
+                                                    <option value="7500,10000">£75 to £100</option>
+                                                    <option value="10000">£100+</option>
+                                                </select>
+                                                <label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_pants_denim">
+                                                    Trousers &amp; Jeans
+                                                </label>
+                                                <select id="uk_mens_onboarding_spendiness_pants_denim" class="Select___style-module__select___KGPHN" name="jeans" required>
+                                                    <option value="">--</option>
+                                                    <option value="4000,5000">£40 to £50</option>
+                                                    <option value="5000,6500">£50 to £65</option>
+                                                    <option value="6500,8000">£65 to £80</option>
+                                                    <option value="8000,10000">£80 to £100</option>
+                                                    <option value="10000">£100+</option>
+                                                </select>
+                                                <label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_shorts">
+                                                    Shorts
+                                                </label>
+                                                <select id="uk_mens_onboarding_spendiness_shorts" class="Select___style-module__select___KGPHN" name="shorts" required>
+                                                    <option value="">--</option>
+                                                    <option value="3000,4000">£30 to £40</option>
+                                                    <option value="4000,5000">£40 to £50</option>
+                                                    <option value="5000,6500">£50 to £65</option>
+                                                    <option value="6500,8000">£75 to £80</option>
+                                                    <option value="8000,10000">£80 to £100</option>
+                                                </select>
+                                                <label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_blazers">Blazers &amp; Jackets</label>
+                                                <select id="uk_mens_onboarding_spendiness_blazers" class="Select___style-module__select___KGPHN" name="jackets" required>
+                                                    <option value="">--</option>
+                                                    <option value="9000,12000">£90 to £120</option>
+                                                    <option value="12000,15000">£120 to £150</option>
+                                                    <option value="15000,20000">£150 to £200</option>
+                                                    <option value="20000,25000">£150 to £200</option>
+                                                    <option value="25000,">£250+</option>
+                                                </select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_coats">Coats</label>
+                                                <select id="uk_mens_onboarding_spendiness_coats" class="Select___style-module__select___KGPHN" name="coats" required>
+                                                    <option value="">--</option>
+                                                    <option value="12000,16000">£120 to £160</option>
+                                                    <option value="16000,20000">£160 to 200</option>
+                                                    <option value="20000,30000">£200 to £300</option>
+                                                    <option value="30000,40000">£300 to £400</option>
+                                                    <option value="40000,">£400+</option>
+                                                </select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_shoes">Shoes</label>
+                                                <select id="uk_mens_onboarding_spendiness_shoes" class="Select___style-module__select___KGPHN" name="shoes" required>
+                                                    <option value="">--</option>
+                                                    <option value="4000,6000">£40 to £60</option>
+                                                    <option value="6000,10000">£60 to 100</option>
+                                                    <option value="10000,15000">£100 to £150</option>
+                                                    <option value="15000,20000">£150 to £200</option>
+                                                    <option value="20000,">£200+</option>
+                                                </select>
                                             </div>
-                                        </div><div class="MultiSelectPage___style-module__multi-select-vertical___pFE8c"><h1 class="Text___text-module__title-large___P1x0K_kfi QuestionPrompt___style-module__prompt___MFxmU" style="color: rgb(37, 40, 45); text-align: center;">How much are you willing to spend on the following items?</h1><div class="MultiSelectPage___style-module__mens_spendiness___HOm--"><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_button_up_shirts">Shirts</label><select id="uk_mens_onboarding_spendiness_button_up_shirts" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="3500,4000">£35 to £40</option><option value="4000,5000">£40 to £50</option><option value="5000,7500">£50 to £75</option><option value="7500,10000">£75 to £100</option><option value="10000,">£100+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_tees_polos">Tees &amp; Polos</label><select id="uk_mens_onboarding_spendiness_tees_polos" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="2500,3500">£25 to £35</option><option value="3500,4500">£35 to £45</option><option value="4500,6000">£45 to £60</option><option value="6000,7500">£60 to £75</option><option value="7500,">£75+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_sweaters_sweatshirts">Jumpers &amp; Sweatshirts</label><select id="uk_mens_onboarding_spendiness_sweaters_sweatshirts" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="3500,4500">£35 to £45</option><option value="4500,6000">£45 to £60</option><option value="6000,7500">£60 to £75</option><option value="7500,10000">£75 to £100</option><option value="10000">£100+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_pants_denim">Trousers &amp; Jeans</label><select id="uk_mens_onboarding_spendiness_pants_denim" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="4000,5000">£40 to £50</option><option value="5000,6500">£50 to £65</option><option value="6500,8000">£65 to £80</option><option value="8000,10000">£80 to £100</option><option value="10000">£100+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_shorts">Shorts</label><select id="uk_mens_onboarding_spendiness_shorts" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="3000,4000">£30 to £40</option><option value="4000,5000">£40 to £50</option><option value="5000,6500">£50 to £65</option><option value="6500,8000">£75 to £80</option><option value="8000,10000">£80 to £100</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_blazers">Blazers &amp; Jackets</label><select id="uk_mens_onboarding_spendiness_blazers" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="9000,12000">£90 to £120</option><option value="12000,15000">£120 to £150</option><option value="15000,20000">£150 to £200</option><option value="20000,25000">£150 to £200</option><option value="25000,">£250+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_coats">Coats</label><select id="uk_mens_onboarding_spendiness_coats" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="12000,16000">£120 to £160</option><option value="16000,20000">£160 to 200</option><option value="20000,30000">£200 to £300</option><option value="30000,40000">£300 to £400</option><option value="40000,">£400+</option></select><label class="Select___style-module__label___wdXK-" for="uk_mens_onboarding_spendiness_shoes">Shoes</label><select id="uk_mens_onboarding_spendiness_shoes" class="Select___style-module__select___KGPHN"><option value="">--</option><option value="4000,6000">£40 to £60</option><option value="6000,10000">£60 to 100</option><option value="10000,15000">£100 to £150</option><option value="15000,20000">£150 to £200</option><option value="20000,">£200+</option></select></div></div><div class="manualAdvance___style-module__btn--cta___cJlLn"><button type="button" class="Button___button-module__root___k1F-z_kfi Button___button-module__large___Vmprq_kfi Button___button-module__secondary___Nt-F4_kfi ">Next</button></div>
+                                        </div>
                                     </div>
-                                    <a href="../Authorize/setDeliveryDate">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="border:none;background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>

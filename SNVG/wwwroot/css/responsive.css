@@ -34,7 +34,7 @@ h1{font-size: 50px;}
 .navigation li a{font-size: 11px;}
 h1{font-size: 45px;}
 .footer-top{padding: 50px 0;}
-.bd{min-height: 150px;}
+/*.bd{min-height: 150px;}*/
 .bd::before{display: none;}
 .footer-btm-pnl p{font-size: 11px;width: 100%;text-align: center;margin-bottom: 15px;}
 .footer-btm-pnl img{width: 140px;}

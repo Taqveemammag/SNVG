@@ -136,7 +136,28 @@
     <Compile Include="Models\Account.cs">
       <DependentUpon>SNVG.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\JeansFit.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MenSize.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OutfitsDesign.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PaymentMethod.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pricing.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrimaryComponent.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.cs">
+      <DependentUpon>SNVG.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShirtStyle.cs">
       <DependentUpon>SNVG.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SNVG.Context.cs">
@@ -480,6 +501,7 @@
     <Content Include="Views\Authorize\thanks.cshtml" />
     <Content Include="Views\Authorize\type.cshtml" />
     <Content Include="Views\Authorize\pricing.cshtml" />
+    <Content Include="Views\Authorize\ProfileUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

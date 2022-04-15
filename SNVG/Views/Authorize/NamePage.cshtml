@@ -61,13 +61,10 @@
                         <div class="row">
                             <div class="login-text-cntnr">
                                 <h2>What is your Name?</h2>
-                                <form role="form">
-                                    <input autocomplete="off" class="form-control" name="" placeholder="First Name" type="text">
-                                    <input autocomplete="off" class="form-control" name="" placeholder="Last Name" type="text">
-                                    <a href="../Authorize/postCode">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="border:none;background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                <form method="post" action="NamePage">
+                                    <input autocomplete="off" class="form-control" id="FirstName" name="FirstName" placeholder="First Name" type="text">
+                                    <input autocomplete="off" class="form-control" id="LastName" name="LastName" placeholder="Last Name" type="text">
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>

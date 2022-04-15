@@ -3,7 +3,7 @@
     ViewBag.Title = "uk_mens_casual_shirts_style_component";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
-
+<link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
         <div class="center-1">
@@ -62,43 +62,39 @@
                         <div class="row">
                             <div class="">
                                 <h3>Choose how you like your T-shirts to fit.</h3>
-                                <form role="form">
+                                <form method="post" action="ShirtStyle">
                                     <div role="region" aria-label="checkbox page" class="CheckboxPage___style-module__container___1ptlr CheckboxPage___style-module__two-cols___qQGuT">
                                         <fieldset class="Checkbox___style-module__fieldset-vertical___ckQux Checkbox___style-module__wrapped___wRKXs Checkbox___style-module__two-cols___jqXVD">
                                             <div @*style="margin-left:2%"*@>
                                                 <label for="slim" class="Checkbox___style-module__cell___sBEy8 Checkbox___style-module__text-before-image___udqZh">
-                                                    <input type="checkbox" id="slim" name="slim" value="slim">
+                                                    <input type="checkbox" id="slim" name="slim">
                                                     <picture>
                                                         <source srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/slim-45257139a7792fe53212b60d201eb68c52a265eb0912a3ac1ce91e07f478496f.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/slim@2x-e85072e3c3eb9616d3ffc7409df4c82d9e9212803fe64cd0030797b495a7990d.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/slim@3x-6f82d64e17dc23a6cbd21f0697db5db2017203883c27114bf663be976a502bfc.jpg 3x" media="(min-width: 1024px)">
                                                         <img alt="Slim" src="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/slim-fe5a5c3aa3cbdd04700fb625090fd0c5001fc8b2c515b0bbaef2a31fb9830d81.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/slim-fe5a5c3aa3cbdd04700fb625090fd0c5001fc8b2c515b0bbaef2a31fb9830d81.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/slim@2x-57f529969109d0671dc97611743f298201569f4f8c56341165363e268a0ab4d4.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/slim@3x-9d8edff81f901b74b697abe362534bb39254cff4b17879e007f7cc606cc08408.jpg 3x">
                                                     </picture>
 
-                                                    @*<span class="Checkbox___style-module__checkbox-label___Wz0B5">Slim</span>*@
-                                                    @*<span class="Checkbox___style-module__checkbox-caption___Ok4RT">Fitted through the chest, trim through the waist, tapered sleeves</span>*@
+                                                    <span class="Checkbox___style-module__checkbox-label___Wz0B5">Slim</span>
+                                                    <span class="Checkbox___style-module__checkbox-caption___Ok4RT">Fitted through the chest, trim through the waist, tapered sleeves</span>
                                                 </label>
                                                 <label for="regular" class="Checkbox___style-module__cell___sBEy8 Checkbox___style-module__text-before-image___udqZh">
-                                                    <input type="checkbox" id="regular" name="regular" value="regular" checked="">
+                                                    <input type="checkbox" id="regular" name="regular">
                                                     <picture>
                                                         <source srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/regular-6fbc2e386813d6003576c9fd84f9bab793f998db7d2756dce84cf187d8ecf113.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/regular@2x-d6c12f46cb01eac82164435642c55ca2200c60f9cbcbaef3d972024a07689149.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/desktop/regular@3x-5ed71307ec98cc3a3002f8947b8094a329e8537cea8ab288766851212a8c8dc8.jpg 3x" media="(min-width: 1024px)">
                                                         <img alt="Regular" src="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/regular-4ffc718fb2a0307dda6c3e0852db2dff0a4183bde8cdc968a508c2c3acc30d8e.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/regular-4ffc718fb2a0307dda6c3e0852db2dff0a4183bde8cdc968a508c2c3acc30d8e.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/regular@2x-200c2c75463828a9ccff84fdb266534a77864d946b8fb6d1e1a8b238bc6da388.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_casual_shirts_style_component/mobile/regular@3x-b6630fbbd09738926b414cf795a64282b7afdec7dccebab633a2523d30085bb6.jpg 3x">
                                                     </picture>
-                                                    <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="none" color="#0AA299" xmlns="http://www.w3.org/2000/svg" class="Checkbox___style-module__check___uebse" alt="">
-                                                        <circle cx="12" cy="12" r="12" fill="currentColor"></circle>
-                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6139 7.21063C19.0499 7.5497 19.1284 8.17798 18.7893 8.61393L11.7893 17.6139C11.6013 17.8556 11.313 17.9979 11.0068 18C10.7006 18.0021 10.4104 17.8638 10.2191 17.6247L6.21911 12.6247C5.8741 12.1934 5.94402 11.5641 6.37528 11.2191C6.80654 10.8741 7.43584 10.944 7.78084 11.3753L10.9889 15.3854L17.2106 7.38604C17.5497 6.9501 18.178 6.87156 18.6139 7.21063Z" fill="white"></path>
-                                                    </svg><span class="Checkbox___style-module__checkbox-label___Wz0B5">Regular</span><span class="Checkbox___style-module__checkbox-caption___Ok4RT">-->
-                                                    @*Relaxed through the chest, waist and sleeves*@
-                                                    <!--</span>-->
+
+                                                    <span class="Checkbox___style-module__checkbox-label___Wz0B5">
+                                                        Regular
+                                                    </span><span class="Checkbox___style-module__checkbox-caption___Ok4RT">
+                                                        Relaxed through the chest, waist and sleeves
+                                                    </span>
                                                 </label>
                                             </div>
                                         </fieldset>
                                     </div>
                                     <div class="login-text-cntnr">
-                                        <a href="../Authorize/uk_mens_jeans_fit_component">
-                                            <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                        </a>
-                                        <input autocomplete="off" style="background:none; border:hidden" name="" value="Already have an Account? Sign In" type="submit">
+                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                     </div>
-
                                 </form>
                             </div>
                         </div>

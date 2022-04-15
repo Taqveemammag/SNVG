@@ -62,7 +62,7 @@
                         <div class="row">
                             <div class="login-text-cntnr">
                                 <h3>How would you like to pay?</h3>
-                                <form role="form">
+                                <form method="post" action="PaymentMethod">
                                     <div class="Summary___style-module__container___J99Zc">
 
                                         <div class="Summary___style-module__item___zxXzp">
@@ -76,19 +76,22 @@
                                                     <li>Will be deducted from the cost of any items you purchase</li>
                                                 </ul>
                                             </div><div>£10</div>
-                                        </div><div class="Summary___style-module__total___h74c9">
+                                        </div>
+                                        <div class="Summary___style-module__total___h74c9">
                                             <div>Total</div>
                                             <div>£10</div>
                                         </div>
-                                        <h1 class="Summary___style-module__title___X8FZV Summary___style-module__payment-copy___AqF7w">Add your payment details</h1>
+                                        <h4 class="Summary___style-module__title___X8FZV Summary___style-module__payment-copy___AqF7w">Add your payment details</h4>
                                     </div>
-                                    <input autocomplete="off" class="form-control" name="" placeholder="Address" type="text">
-                                    <input autocomplete="off" class="form-control" name="" placeholder="Address 2" type="text">
-                                    <input type="checkbox" value="Cash on Delivery" id="cashdelivery" style="margin-right:20px" /><label>Cash on delivery</label>
-                                    <a href="../Authorize/thanks">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next : Shipping" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="border:hidden; background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                    <h3 class="">Credit Card or Debit Card Details</h3>
+                                    <input autocomplete="off" class="form-control" name="CardName" placeholder="CardHolder Name" type="text">
+                                    <input autocomplete="off" class="form-control" name="cardnumber" placeholder="Card Number" type="text">
+                                    <input autocomplete="off" class="form-control" name="ExpiryDate" placeholder="Expiration" type="datetime">
+                                    <input autocomplete="off" class="form-control" name="cvv" placeholder="CVV" type="text">
+                                    <input autocomplete="off" class="form-control" name="PsotCode" placeholder="Postcode" type="text">
+                                    <input autocomplete="off" class="form-control" name="Address" placeholder="Address" type="text">
+                                    <input type="checkbox" name="COD"> Cash On Delivery
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next : Shipping" type="submit">
                                 </form>
                             </div>
                         </div>

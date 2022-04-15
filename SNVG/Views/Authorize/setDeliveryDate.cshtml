@@ -11,7 +11,6 @@
                     display: inline-block;
                     width: 100%;
                     position: relative;
-                    padding: 100px 0;
                 }
 
                 #Login-page {
@@ -70,7 +69,7 @@
                                         <div class="FirstFixScheduler___style-module__CalendarWrapper___G45vP">
                                             <div class="FirstFixScheduler___style-module__DatePickerWrapper___sFR2q">
                                                 <a>
-                                                    <input type="datetime-local" id="birthdaytime" name="birthdaytime" value="@DateTime.Now">
+                                                    <input type="text" id="birthdaytime" name="birthdaytime" value="@DateTime.Now.AddDays(10).GetDateTimeFormats().FirstOrDefault()" style="padding:2%; margin-bottom:10px" disabled>
                                                     @*<span class="FirstFixScheduler___style-module__fix-date___qKOZ1">Thursday, 21 April</span>*@
                                                 </a>
                                             </div>
@@ -87,7 +86,6 @@
                                     <a href="../Authorize/paymentMethod">
                                         <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
                                     </a>
-                                    <input autocomplete="off" style="background:none; border:hidden" name="" value="Already have an Account? Sign In" type="submit">
                                 </form>
                             </div>
                         </div>

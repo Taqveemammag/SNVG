@@ -24,7 +24,7 @@ img{max-width: 100%;}
     font-weight: 500;
     font-style: normal;
 }*/
-@font-face {
+/*@font-face {
     font-family: 'Futura MdCn BT';
     src: url('../fonts/FuturaStd-Medium.woff2') format('woff2'),
         url('../fonts/FuturaStd-Medium.woff') format('woff');
@@ -48,7 +48,7 @@ img{max-width: 100%;}
         url('../fonts/Limerick-Medium.woff') format('woff');
     font-weight: 100;
     font-style: normal;
-}
+}*/
 
 body,
 p,
@@ -61,7 +61,7 @@ h6,
 a,
 .product-item-detail-txt .pagination-nav li a{
   /*font-family: 'Futura MdCn BT';*/
-  font-family: 'Limerick';
+  /*font-family: 'Aria';*/
 }
 /* Font Family */
 

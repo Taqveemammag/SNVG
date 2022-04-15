@@ -80,41 +80,67 @@
                     <div class="container">
                         <div class="row">
                             <div class="login-text-cntnr">
-                                <h3>What are the reasons you're excited to try Stitch Fix?</h3>
-                                <form role="form">
+                                <h3>What are the reasons you're excited to try SNVG?</h3>
+                                <form method="post" action="PrimaryObjectives">
                                     <div role="region" aria-label="checkbox page" class="CheckboxPage___style-module__container___1ptlr">
                                         <div class=" ">
                                             <div>
-                                                <div class="test">
-                                                    <label style="min-width: 8rem;">
-                                                        <input type="checkbox" name="uk_mens_onboarding_primary_objectives" value="try_new_items">Try new items
-                                                    </label>
-                                                </div>
-                                                <div class=" ">
-                                                    <label style="min-width: 8rem;"><input type="checkbox" id="uk_mens_onboarding_primary_objectives1-discovery" name="uk_mens_onboarding_primary_objectives" value="discovery" checked="">Discover new trends</label>
-                                                </div>
-                                                <div class=" ">
-                                                    <label style="min-width: 8rem;">
-                                                        <input type="checkbox" id="uk_mens_onboarding_primary_objectives1-save_time" name="uk_mens_onboarding_primary_objectives" value="save_time">Save time
-                                                    </label>
-                                                </div>
-                                                <div class=" ">
-                                                    <label style="min-width: 8rem;">
-                                                        <input type="checkbox" id="uk_mens_onboarding_primary_objectives1-expert_advice" name="uk_mens_onboarding_primary_objectives" value="expert_advice" checked="">Expert advice
-                                                    </label>
-                                                </div>
-                                                <div class=" ">
-                                                    <label style="min-width: 8rem;">
-                                                        <input type="checkbox" id="uk_mens_onboarding_primary_objectives1-exclusive_brands" name="uk_mens_onboarding_primary_objectives" value="exclusive_brands" checked="">Access to exclusive brands
-                                                    </label>
-                                                </div>
+                                                <table style="margin-top: 30px">
+                                                    <tr>
+                                                        <td style="padding-left:100px; padding-right:50px">
+                                                            @Html.CheckBox("TryNew", false, new { autocomplete = "off", requird = "Required" })
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                Try new items
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left:100px; padding-right:50px">
+                                                            @Html.CheckBox("discovery", false, new { autocomplete = "off", requird = "Required" })
+                                                        </td>
+                                                        <td>
+                                                            <label style="min-width: 8rem;">
+                                                                Discover new trends
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left:100px; padding-right:50px">
+                                                            @Html.CheckBox("savetime", false, new { autocomplete = "off", requird = "Required" })
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                Save time
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left:100px; padding-right:50px">
+                                                            @Html.CheckBox("expertadvice", false, new { autocomplete = "off", requird = "Required" })
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                Expert advice
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left:100px; padding-right:50px">
+                                                            @Html.CheckBox("exclusive_brands", false, new { autocomplete = "off", requird = "Required" })
+                                                        </td>
+                                                        <td>
+                                                            <label>
+                                                                Access to exclusive brands
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="../Authorize/uk_height_component">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="button">
-                                    </a>
-                                    <input autocomplete="off" style="border:hidden; background:none" name="" value="Already have an Account? Sign In" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>
