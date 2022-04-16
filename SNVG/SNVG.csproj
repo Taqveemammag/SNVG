@@ -376,6 +376,8 @@
     <Content Include="wwwroot\images\recent-2.jpg" />
     <Content Include="wwwroot\images\recent-3.jpg" />
     <Content Include="wwwroot\images\search.png" />
+    <Content Include="wwwroot\images\shirts\Regular.jpg" />
+    <Content Include="wwwroot\images\shirts\slim.jpg" />
     <Content Include="wwwroot\images\shoes-1.jpg" />
     <Content Include="wwwroot\images\shoes-1.png" />
     <Content Include="wwwroot\images\shoes-2.jpg" />

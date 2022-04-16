@@ -61,6 +61,10 @@ namespace SNVG.Controllers
         {
             try
             {
+                if (string.IsNullOrEmpty(email))
+                {
+                    return RedirectToAction("SignUp", "Authorize");
+                }
                 bool Status = false;
                 string message = "";
 
