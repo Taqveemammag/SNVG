@@ -207,6 +207,7 @@
     <Content Include="wwwroot\css\responsive.css" />
     <Content Include="wwwroot\css\style.css" />
     <Content Include="wwwroot\css\theme.css" />
+    <Content Include="wwwroot\css\type.css" />
     <Content Include="wwwroot\fonts\._demo.html" />
     <Content Include="wwwroot\fonts\._font-awesome.css" />
     <Content Include="wwwroot\fonts\._fontawesome-webfont.svg" />
