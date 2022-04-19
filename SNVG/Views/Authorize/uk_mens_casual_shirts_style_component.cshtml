@@ -3,6 +3,7 @@
     ViewBag.Title = "uk_mens_casual_shirts_style_component";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
@@ -93,7 +94,7 @@
                                         </fieldset>
                                     </div>
                                     <div class="login-text-cntnr">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
+                                        <input autocomplete="off" class="form-control sbmt" name="" onclick="validation()" value="Next" type="button">
                                     </div>
                                 </form>
                             </div>
@@ -104,3 +105,19 @@
         </div>
     </div>
 </div>
+<script>
+    function validation() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+        if (checkedOne == false) {
+            alert("Please select atleast one reason");
+        }
+        else {
+            var x = document.getElementById("slim").checked;
+            var x1 = document.getElementById("regular").checked;
+            $.post("../Authorize/ShirtStyle", { slim: x, regular: x1 }, function (data) {
+                window.location.href = "../Authorize/uk_mens_jeans_fit_component";
+            });
+        }
+    }
+</script>

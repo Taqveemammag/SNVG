@@ -435,6 +435,7 @@
     <Content Include="wwwroot\js\jquery-select7.js" />
     <Content Include="wwwroot\js\jquery.js" />
     <Content Include="wwwroot\js\mensizecomponent.js" />
+    <Content Include="wwwroot\js\type.js" />
     <EntityDeploy Include="Models\SNVG.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SNVG.Designer.cs</LastGenOutput>

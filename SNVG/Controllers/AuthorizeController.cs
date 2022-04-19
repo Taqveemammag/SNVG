@@ -187,7 +187,7 @@ namespace SNVG.Controllers
         }
         [HttpPost]
         [ActionName("PrimaryObjectives")]
-        public ActionResult uk_mens_primary_objectives_component(bool discovery, bool TryNew, bool exclusive_brands, bool expertadvice, bool savetime)
+        public void uk_mens_primary_objectives_component(bool discovery, bool TryNew, bool exclusive_brands, bool expertadvice, bool savetime)
         {
             if (Session["Latest_UerID"] != null)
             {
@@ -206,11 +206,9 @@ namespace SNVG.Controllers
                 dbmodel.PrimaryComponents.Add(enter);
                 dbmodel.SaveChanges();
 
-                return RedirectToAction("uk_height_component", "Authorize");
             }
             else
             {
-                return RedirectToAction("SignUp", "Authorize");
             }
         }
 
@@ -358,7 +356,7 @@ namespace SNVG.Controllers
 
         [HttpPost]
         [ActionName("ShirtStyle")]
-        public ActionResult uk_mens_casual_shirts_style_components(string slim, string regular)
+        public ActionResult uk_mens_casual_shirts_style_components(bool? slim, bool? regular)
         {
             try
             {
@@ -368,21 +366,21 @@ namespace SNVG.Controllers
                     var account = dbmodel.Accounts.Where(x => x.Id == accountId).FirstOrDefault();
                     var slimShirt = false;
                     var regularshirt = false;
-                    if (!string.IsNullOrEmpty(slim))
-                    {
-                        slimShirt = true;
-                    }
+                    //if (!string.IsNullOrEmpty(slim))
+                    //{
+                    //    slimShirt = true;
+                    //}
 
-                    if (!string.IsNullOrEmpty(regular))
-                    {
-                        regularshirt = true;
-                    }
+                    //if (!string.IsNullOrEmpty(regular))
+                    //{
+                    //    regularshirt = true;
+                    //}
 
                     var size = new ShirtStyle()
                     {
                         AccountId = account.Id,
-                        Regulat = slimShirt,
-                        Slim = regularshirt
+                        Regulat = regular,
+                        Slim = slim
                     };
 
                     dbmodel.ShirtStyles.Add(size);
@@ -414,7 +412,7 @@ namespace SNVG.Controllers
         }
         [HttpPost]
         [ActionName("JeansStyle")]
-        public ActionResult uk_mens_jeans_fit_component(string skinny, string slim, string relaxed, string straight)
+        public ActionResult uk_mens_jeans_fit_component(bool? skinny, bool? slim, bool? relaxed, bool? straight)
         {
             try
             {
@@ -424,29 +422,29 @@ namespace SNVG.Controllers
                     var account = dbmodel.Accounts.Where(x => x.Id == accountId).FirstOrDefault();
                     var skinnyJeans = false; var slimJeans = false; var relaxedJeans = false; var straightJeans = false;
 
-                    if (!string.IsNullOrEmpty(skinny))
-                    {
-                        skinnyJeans = true;
-                    }
-                    if (!string.IsNullOrEmpty(slim))
-                    {
-                        slimJeans = true;
-                    }
-                    if (!string.IsNullOrEmpty(relaxed))
-                    {
-                        relaxedJeans = true;
-                    }
-                    if (!string.IsNullOrEmpty(straight))
-                    {
-                        straightJeans = true;
-                    }
+                    //if (!string.IsNullOrEmpty(skinny))
+                    //{
+                    //    skinnyJeans = true;
+                    //}
+                    //if (!string.IsNullOrEmpty(slim))
+                    //{
+                    //    slimJeans = true;
+                    //}
+                    //if (!string.IsNullOrEmpty(relaxed))
+                    //{
+                    //    relaxedJeans = true;
+                    //}
+                    //if (!string.IsNullOrEmpty(straight))
+                    //{
+                    //    straightJeans = true;
+                    //}
                     var size = new JeansFit()
                     {
                         AccountId = account.Id,
-                        Slim = slimJeans,
-                        Relaxed = relaxedJeans,
-                        Skinny = skinnyJeans,
-                        Straight = straightJeans
+                        Slim = slim,
+                        Relaxed = relaxed,
+                        Skinny = skinny,
+                        Straight = straight
                     };
 
                     dbmodel.JeansFits.Add(size);

@@ -3,7 +3,8 @@
     ViewBag.Title = "type";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
-<link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
+<link href="~/wwwroot/css/type.css" rel="stylesheet" />
+<script src="~/wwwroot/js/type.js"></script>
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
         <div class="center-1">
@@ -56,6 +57,18 @@
 
                 .checkbox-class {
                     position: absolute;
+                    
+                }
+                :checked + label:before {
+                    content: "✓";
+                    background-color: grey;
+                    transform: scale(1);
+                }
+
+                :checked + label img {
+                    transform: scale(0.9);
+                    box-shadow: 0 0 5px #333;
+                    z-index: -1;
                 }
             </style>
             <div id="Login-page" class="inner-page">
@@ -71,200 +84,248 @@
                                             <div class="CheckboxImagePage___style-module__option-wrapper___AHHna CheckboxImagePage___style-module__style-sphere___bAdX3">
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Athletic_v2A">
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <input type="checkbox" class="checkbox-class" />
-                                                        <picture>
-                                                            <img alt="Athletic shorts with jacket" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v2A-0c54e263b39a75094ed8f6542a1e7d0c0c6971f9d17aa05eb207e7fe1f942590.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v2A-0c54e263b39a75094ed8f6542a1e7d0c0c6971f9d17aa05eb207e7fe1f942590.jpg 1x">
-                                                        </picture>
+                                                        <input type="checkbox" class="checkbox-class" id="skinny" name="skinny" hidden>
+                                                        <label for="skinny">
+                                                            <picture>
+                                                                <img alt="Athletic shorts with jacket" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v2A-0c54e263b39a75094ed8f6542a1e7d0c0c6971f9d17aa05eb207e7fe1f942590.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v2A-0c54e263b39a75094ed8f6542a1e7d0c0c6971f9d17aa05eb207e7fe1f942590.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Coastal-Forward_v1">
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <input type="checkbox" class="checkbox-class"/>
-                                                        <picture>
-                                                            <img alt="Faded jeans and short sleeve plaid shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v1-26a6ad9501d831e282cad9572d02fac7433f374db249dc839fd608bf6deff0f1.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v1-26a6ad9501d831e282cad9572d02fac7433f374db249dc839fd608bf6deff0f1.jpg 1x">
-                                                        </picture>
+                                                        <input type="checkbox" class="checkbox-class" id="st2" hidden/>
+                                                        <label for="st2">
+                                                            <picture>
+                                                                <img alt="Faded jeans and short sleeve plaid shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v1-26a6ad9501d831e282cad9572d02fac7433f374db249dc839fd608bf6deff0f1.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v1-26a6ad9501d831e282cad9572d02fac7433f374db249dc839fd608bf6deff0f1.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Coastal-Forward_v2">
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <input type="checkbox" class="checkbox-class"/>
-                                                        <picture>
-                                                            <img alt="Stripped short sleeve button-up with pants" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v2-cea9da3ea3511314bc336af3a2f4a6fc7b873c797bc0ac0820140805e515779a.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v2-cea9da3ea3511314bc336af3a2f4a6fc7b873c797bc0ac0820140805e515779a.jpg 1x">
-                                                        </picture>
+                                                        <input type="checkbox" class="checkbox-class" id="st3" hidden/>
+                                                        <label for="st3">
+                                                            <picture>
+                                                                <img alt="Stripped short sleeve button-up with pants" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v2-cea9da3ea3511314bc336af3a2f4a6fc7b873c797bc0ac0820140805e515779a.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Coastal-Forward_v2-cea9da3ea3511314bc336af3a2f4a6fc7b873c797bc0ac0820140805e515779a.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw CheckboxImagePage___style-module__selected___AJGNY" data-testid="M_SS_Creative-Casual-All-American_v3">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st4" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Stone pants with jacket over white shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-All-American_v3-45aa19fd2aa37633d9472b7be0af9bc500c950fa5bc399c4e91869e5297571ce.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-All-American_v3-45aa19fd2aa37633d9472b7be0af9bc500c950fa5bc399c4e91869e5297571ce.jpg 1x">
-                                                        </picture>
+                                                        <label for="st4">
+                                                            <picture>
+                                                                <img alt="Stone pants with jacket over white shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-All-American_v3-45aa19fd2aa37633d9472b7be0af9bc500c950fa5bc399c4e91869e5297571ce.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-All-American_v3-45aa19fd2aa37633d9472b7be0af9bc500c950fa5bc399c4e91869e5297571ce.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Athletic_v1">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st5" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Cargo pants with puffy jacket" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Athletic_v1-04033fa31850d39f31d908b37cc37433ad8ed97f023b6c3b1d3df879852ce7ca.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Athletic_v1-04033fa31850d39f31d908b37cc37433ad8ed97f023b6c3b1d3df879852ce7ca.jpg 1x">
-                                                        </picture>
+                                                        <label for="st5">
+                                                            <picture>
+                                                                <img alt="Cargo pants with puffy jacket" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Athletic_v1-04033fa31850d39f31d908b37cc37433ad8ed97f023b6c3b1d3df879852ce7ca.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Athletic_v1-04033fa31850d39f31d908b37cc37433ad8ed97f023b6c3b1d3df879852ce7ca.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Easy_v3">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st6" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Chinos with v-neck jumper over collared shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Easy_v3-3848680d540b6476dfaca4c6178bba960be2a4b100c1f21b3ed38dd335c2ccb8.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Easy_v3-3848680d540b6476dfaca4c6178bba960be2a4b100c1f21b3ed38dd335c2ccb8.jpg 1x">
-                                                        </picture>
+                                                        <label for="st6">
+                                                            <picture>
+                                                                <img alt="Chinos with v-neck jumper over collared shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Easy_v3-3848680d540b6476dfaca4c6178bba960be2a4b100c1f21b3ed38dd335c2ccb8.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Easy_v3-3848680d540b6476dfaca4c6178bba960be2a4b100c1f21b3ed38dd335c2ccb8.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Forward_v6">
+                                                    <input type="checkbox" class="checkbox-class" id="st7" />
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <input type="checkbox" class="checkbox-class"/>
-                                                        <picture>
-                                                            <img alt="Checkered button-up shirt with jacket and trousers" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v6-8a483e283b0492aadbf102459af26449b53db7f20aebfafc667dcd52b34dc0d7.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v6-8a483e283b0492aadbf102459af26449b53db7f20aebfafc667dcd52b34dc0d7.jpg 1x">
-                                                        </picture>
+                                                        <label for="st7">
+                                                            <picture>
+                                                                <img alt="Checkered button-up shirt with jacket and trousers" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v6-8a483e283b0492aadbf102459af26449b53db7f20aebfafc667dcd52b34dc0d7.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v6-8a483e283b0492aadbf102459af26449b53db7f20aebfafc667dcd52b34dc0d7.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Forward_v7">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st9" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Solid polo shirt with jacket and trousers" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v7-a8653c84adad5708e39f7185be94370c3e13011998005a4360261dca601ed4bc.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v7-a8653c84adad5708e39f7185be94370c3e13011998005a4360261dca601ed4bc.jpg 1x">
-                                                        </picture>
+                                                        <label for="st9">
+                                                            <picture>
+                                                                <img alt="Solid polo shirt with jacket and trousers" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v7-a8653c84adad5708e39f7185be94370c3e13011998005a4360261dca601ed4bc.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Forward_v7-a8653c84adad5708e39f7185be94370c3e13011998005a4360261dca601ed4bc.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Medium_v2">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st10" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Chinos with solid button up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Medium_v2-2174af63657c265aa853bac786fc43ea775c08c52d7a3cf7b5815698b2e48b5d.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Medium_v2-2174af63657c265aa853bac786fc43ea775c08c52d7a3cf7b5815698b2e48b5d.jpg 1x">
-                                                        </picture>
+                                                        <label for="st10">
+                                                            <picture>
+                                                                <img alt="Chinos with solid button up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Medium_v2-2174af63657c265aa853bac786fc43ea775c08c52d7a3cf7b5815698b2e48b5d.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Medium_v2-2174af63657c265aa853bac786fc43ea775c08c52d7a3cf7b5815698b2e48b5d.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Creative-Casual-Preppy-Coastal_v2">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st11" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Hawaiian shirt with loose chinos" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Preppy-Coastal_v2-84a075102be7b2999ae5b2e6feb94925446815c3ed4d71ce4e26669447d60d05.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Preppy-Coastal_v2-84a075102be7b2999ae5b2e6feb94925446815c3ed4d71ce4e26669447d60d05.jpg 1x">
-                                                        </picture>
+                                                        <label for="st11">
+                                                            <picture>
+                                                                <img alt="Hawaiian shirt with loose chinos" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Preppy-Coastal_v2-84a075102be7b2999ae5b2e6feb94925446815c3ed4d71ce4e26669447d60d05.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Creative-Casual-Preppy-Coastal_v2-84a075102be7b2999ae5b2e6feb94925446815c3ed4d71ce4e26669447d60d05.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Heritage-Hipster-Forward_v3">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st12" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Cuffed jeans with denim button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Forward_v3-1a8c4cbd4c759ec6ba2074e5b27a5f1cc8f6e7ee6bb3270f7443267fee7d0139.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Forward_v3-1a8c4cbd4c759ec6ba2074e5b27a5f1cc8f6e7ee6bb3270f7443267fee7d0139.jpg 1x">
-                                                        </picture>
+                                                        <label for="st12">
+                                                            <picture>
+                                                                <img alt="Cuffed jeans with denim button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Forward_v3-1a8c4cbd4c759ec6ba2074e5b27a5f1cc8f6e7ee6bb3270f7443267fee7d0139.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Forward_v3-1a8c4cbd4c759ec6ba2074e5b27a5f1cc8f6e7ee6bb3270f7443267fee7d0139.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Heritage-Hipster-Medium_v1">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st13" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Plaid shirt with skinny jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Medium_v1-1780e21b5da62574063c60d3609e3fadc442b7d2e73dda0bc684770ee4889f67.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Medium_v1-1780e21b5da62574063c60d3609e3fadc442b7d2e73dda0bc684770ee4889f67.jpg 1x">
-                                                        </picture>
+                                                        <label for="st13">
+                                                            <picture>
+                                                                <img alt="Plaid shirt with skinny jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Medium_v1-1780e21b5da62574063c60d3609e3fadc442b7d2e73dda0bc684770ee4889f67.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Heritage-Hipster-Medium_v1-1780e21b5da62574063c60d3609e3fadc442b7d2e73dda0bc684770ee4889f67.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_NY-Modern-Forward_v1">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st14" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Leather jacket with black jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Forward_v1-71362f0a33d5ae4ba066661a14e5b89b09a57a739f063a7f4e3a87d4ee7cf73a.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Forward_v1-71362f0a33d5ae4ba066661a14e5b89b09a57a739f063a7f4e3a87d4ee7cf73a.jpg 1x">
-                                                        </picture>
+                                                        <label for="st14">
+                                                            <picture>
+                                                                <img alt="Leather jacket with black jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Forward_v1-71362f0a33d5ae4ba066661a14e5b89b09a57a739f063a7f4e3a87d4ee7cf73a.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Forward_v1-71362f0a33d5ae4ba066661a14e5b89b09a57a739f063a7f4e3a87d4ee7cf73a.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_NY-Modern-Medium_v1">
-                                                    <input type="checkbox" class="checkbox-class"/>
+                                                    <input type="checkbox" class="checkbox-class" id="st15" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Solid black shirt with black jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v1-9bcd836f06ec41001ed77f899d8df4fe15289db82e918807d33e25a397c7a581.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v1-9bcd836f06ec41001ed77f899d8df4fe15289db82e918807d33e25a397c7a581.jpg 1x">
-                                                        </picture>
+                                                        <label for="st15">
+                                                            <picture>
+                                                                <img alt="Solid black shirt with black jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v1-9bcd836f06ec41001ed77f899d8df4fe15289db82e918807d33e25a397c7a581.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v1-9bcd836f06ec41001ed77f899d8df4fe15289db82e918807d33e25a397c7a581.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_NY-Modern-Medium_v2">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st16" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Short sleeve button-up shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v2-576a777b39467ae9a3f7a054af2657605c2bf02f54d3d6bca67e7d90c83d00ee.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v2-576a777b39467ae9a3f7a054af2657605c2bf02f54d3d6bca67e7d90c83d00ee.jpg 1x">
-                                                        </picture>
+                                                        <label for="st16">
+                                                            <picture>
+                                                                <img alt="Short sleeve button-up shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v2-576a777b39467ae9a3f7a054af2657605c2bf02f54d3d6bca67e7d90c83d00ee.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_NY-Modern-Medium_v2-576a777b39467ae9a3f7a054af2657605c2bf02f54d3d6bca67e7d90c83d00ee.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Preppy-Coastal_v4B">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st17" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Surf trunks with hoodie" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Coastal_v4B-65d214fa52a6c8e1db34439166ca856a6bf846b3db3554a71f62eccfee03cf12.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Coastal_v4B-65d214fa52a6c8e1db34439166ca856a6bf846b3db3554a71f62eccfee03cf12.jpg 1x">
-                                                        </picture>
+                                                        <label for="st17">
+                                                            <picture>
+                                                                <img alt="Surf trunks with hoodie" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Coastal_v4B-65d214fa52a6c8e1db34439166ca856a6bf846b3db3554a71f62eccfee03cf12.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Coastal_v4B-65d214fa52a6c8e1db34439166ca856a6bf846b3db3554a71f62eccfee03cf12.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Preppy-Forward_v1">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st18" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Salmon trousers and crew neck jumper" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Forward_v1-30fce31ae19bf3a91fa0e63a777f1e7ab8b539ba88ff499dde70bcaaf3221dbe.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Forward_v1-30fce31ae19bf3a91fa0e63a777f1e7ab8b539ba88ff499dde70bcaaf3221dbe.jpg 1x">
-                                                        </picture>
+                                                        <label for="st18">
+                                                            <picture>
+                                                                <img alt="Salmon trousers and crew neck jumper" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Forward_v1-30fce31ae19bf3a91fa0e63a777f1e7ab8b539ba88ff499dde70bcaaf3221dbe.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Forward_v1-30fce31ae19bf3a91fa0e63a777f1e7ab8b539ba88ff499dde70bcaaf3221dbe.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_All-American-Easy_v1">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st19" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Cargo shorts with plaid button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American-Easy_v1-8d9add9bf2553e9e880269aba1eb579853e08f4f7f57e29da064f82fd3990351.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American-Easy_v1-8d9add9bf2553e9e880269aba1eb579853e08f4f7f57e29da064f82fd3990351.jpg 1x">
-                                                        </picture>
+                                                        <label for="st19">
+                                                            <picture>
+                                                                <img alt="Cargo shorts with plaid button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American-Easy_v1-8d9add9bf2553e9e880269aba1eb579853e08f4f7f57e29da064f82fd3990351.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American-Easy_v1-8d9add9bf2553e9e880269aba1eb579853e08f4f7f57e29da064f82fd3990351.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_All-American_v2B">
-                                                    <input type="checkbox" class="checkbox-class" />    
+                                                    <input type="checkbox" class="checkbox-class" id="st20" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Plaid button-up shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v2B-068f67cd787c9c27b09dd645516d45cb472ea4f0a8fded0554c08534d88b7fa0.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v2B-068f67cd787c9c27b09dd645516d45cb472ea4f0a8fded0554c08534d88b7fa0.jpg 1x">
-                                                        </picture>
+                                                        <label for="st20">
+                                                            <picture>
+                                                                <img alt="Plaid button-up shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v2B-068f67cd787c9c27b09dd645516d45cb472ea4f0a8fded0554c08534d88b7fa0.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v2B-068f67cd787c9c27b09dd645516d45cb472ea4f0a8fded0554c08534d88b7fa0.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_All-American_v3A">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st21" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Raglan shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v3A-69f453f23fd256b7311e8de06911cf33c9c65db73e9fd896c8b532d387abeaa9.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v3A-69f453f23fd256b7311e8de06911cf33c9c65db73e9fd896c8b532d387abeaa9.jpg 1x">
-                                                        </picture>
+                                                        <label for="st21">
+                                                            <picture>
+                                                                <img alt="Raglan shirt with jeans" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v3A-69f453f23fd256b7311e8de06911cf33c9c65db73e9fd896c8b532d387abeaa9.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_All-American_v3A-69f453f23fd256b7311e8de06911cf33c9c65db73e9fd896c8b532d387abeaa9.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Athletic_v1A">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st22" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Athletic jumper with tracksuit bottoms" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v1A-1b08863ac664174f0ba1b83ce2436b7c8ef9106c8de2063d82a5deb033166ae1.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v1A-1b08863ac664174f0ba1b83ce2436b7c8ef9106c8de2063d82a5deb033166ae1.jpg 1x">
-                                                        </picture>
+                                                        <label for="st22">
+                                                            <picture>
+                                                                <img alt="Athletic jumper with tracksuit bottoms" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v1A-1b08863ac664174f0ba1b83ce2436b7c8ef9106c8de2063d82a5deb033166ae1.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v1A-1b08863ac664174f0ba1b83ce2436b7c8ef9106c8de2063d82a5deb033166ae1.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Preppy-Medium_v1">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st23" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Short sleeve polo with gingham shorts" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v1-823c47a1a69e4aa8c961d55ac35d124f008d9efbd16f0766efec70cd68e8c65f.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v1-823c47a1a69e4aa8c961d55ac35d124f008d9efbd16f0766efec70cd68e8c65f.jpg 1x">
-                                                        </picture>
+                                                        <label for="st23">
+                                                            <picture>
+                                                                <img alt="Short sleeve polo with gingham shorts" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v1-823c47a1a69e4aa8c961d55ac35d124f008d9efbd16f0766efec70cd68e8c65f.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v1-823c47a1a69e4aa8c961d55ac35d124f008d9efbd16f0766efec70cd68e8c65f.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Preppy-Medium_v2">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st25" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Stone shorts with checkered button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v2-1539bece40fdedff81a1d9a67b06f79d014371cba6e6c6e4ff607e1a94806810.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v2-1539bece40fdedff81a1d9a67b06f79d014371cba6e6c6e4ff607e1a94806810.jpg 1x">
-                                                        </picture>
+                                                        <label for="st25">
+                                                            <picture>
+                                                                <img alt="Stone shorts with checkered button-up shirt" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v2-1539bece40fdedff81a1d9a67b06f79d014371cba6e6c6e4ff607e1a94806810.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Preppy-Medium_v2-1539bece40fdedff81a1d9a67b06f79d014371cba6e6c6e4ff607e1a94806810.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                                 <span class="CheckboxImagePage___style-module__option-container___Y-itw" data-testid="M_SS_Athletic_v3C">
-                                                    <input type="checkbox" class="checkbox-class" />
+                                                    <input type="checkbox" class="checkbox-class" id="st24" hidden/>
                                                     <div class="CheckboxImagePage___style-module__image-wrapper___ozn6s">
-                                                        <picture>
-                                                            <img alt="Polo shirt with black shorts" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v3C-558fc60880da7d80b719f03ccc550b517fe82f7d6e7a15d8ec1b7b991e3f9612.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v3C-558fc60880da7d80b719f03ccc550b517fe82f7d6e7a15d8ec1b7b991e3f9612.jpg 1x">
-                                                        </picture>
+                                                        <label for="st24">
+                                                            <picture>
+                                                                <img alt="Polo shirt with black shorts" src="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v3C-558fc60880da7d80b719f03ccc550b517fe82f7d6e7a15d8ec1b7b991e3f9612.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_style_sphere_component/mobile/M_SS_Athletic_v3C-558fc60880da7d80b719f03ccc550b517fe82f7d6e7a15d8ec1b7b991e3f9612.jpg 1x">
+                                                            </picture>
+                                                        </label>
                                                     </div>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>

@@ -3,6 +3,7 @@
     ViewBag.Title = "uk_mens_jeans_fit_component";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
@@ -68,7 +69,7 @@
                                             <fieldset class="Checkbox___style-module__fieldset-vertical___ckQux Checkbox___style-module__wrapped___wRKXs Checkbox___style-module__two-cols___jqXVD">
                                                 <div>
                                                     <label for="skinny" class="Checkbox___style-module__cell___sBEy8 Checkbox___style-module__text-before-image___udqZh">
-                                                        <input type="checkbox" id="skinny" name="skinny" required>
+                                                        <input type="checkbox" id="skinny" name="skinny">
                                                         <picture>
                                                             <source srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/desktop/skinny-cd04d0972829a2653d5a3da6621b66925efcbc72af1d6712fe961f83c63351c9.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/desktop/skinny@2x-f2be00602dbdd6d6ae96773820084d4726e26736e06b2ab8eebd921c08588d61.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/desktop/skinny@3x-21119e9aee7f5f6b5f7f0efe7c3e54e4de195e38f7362d84da4796f0dfcd8d01.jpg 3x" media="(min-width: 1024px)">
                                                             <img alt="Skinny" src="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/mobile/skinny-78b578d207be94f25c1497c7b0041759b8ba8b0a998112ccdefa09aa624d472e.jpg" srcset="https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/mobile/skinny-78b578d207be94f25c1497c7b0041759b8ba8b0a998112ccdefa09aa624d472e.jpg 1x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/mobile/skinny@2x-47fc6d3d9d4d3051162e8efc99975a9cbacd6729807e1f5bb54a312995ff931b.jpg 2x,https://assets.stitchfix.com/dasher/assets/components/mens_enhanced_jeans_fit_component/mobile/skinny@3x-d362954f36f729c30a8032abd1c626907c0eec3db1898f0791d71b68f4f275f9.jpg 3x">
@@ -108,7 +109,7 @@
                                         </div>
                                     </div>
                                     <div class="login-text-cntnr">
-                                        <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
+                                        <input autocomplete="off" class="form-control sbmt" name="" onclick="validation();" value="Next" type="button">
                                     </div>
                                 </form>
                             </div>
@@ -119,3 +120,22 @@
         </div>
     </div>
 </div>
+<script>
+    function validation() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+        alert(checkedOne);
+        if (checkedOne == false) {
+            alert("Please select atleast one Type");
+        }
+        else {
+            var x = document.getElementById("skinny").checked;
+            var x1 = document.getElementById("slim").checked;
+            var x2 = document.getElementById("straight").checked;
+            var x3 = document.getElementById("relaxed").checked;
+            $.post("../Authorize/JeansStyle", { skinny: x, slim: x1, relaxed: x2, straight: x3}, function (data) {
+                window.location.href = "../Authorize/type";
+            });
+        }
+    }
+</script>

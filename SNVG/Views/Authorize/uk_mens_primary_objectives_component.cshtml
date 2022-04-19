@@ -3,6 +3,7 @@
     ViewBag.Title = "uk_mens_primary_objectives_component";
     Layout = "~/Views/Shared/_sharedLayout.cshtml";
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="~/wwwroot/css/mensizecomponent.css" rel="stylesheet" />
 <div class="master-wrapper-content">
     <div class="master-column-wrapper">
@@ -140,7 +141,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input autocomplete="off" class="form-control sbmt" name="" onclick="validation();" value="Next" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" onclick="validation();" value="Next" type="button">
                                 </form>
                             </div>
                         </div>
@@ -157,6 +158,16 @@
         var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
         if (checkedOne == false) {
             alert("Please select atleast one reason");
+        }
+        else {
+            var x = document.getElementById("exclusive_brands").checked;
+            var x1 = document.getElementById("expertadvice").checked;
+            var x2 = document.getElementById("savetime").checked;
+            var x3 = document.getElementById("TryNew").checked;
+            var x4 = document.getElementById("discovery").checked;
+            $.post("../Authorize/PrimaryObjectives", { discovery: x, TryNew: x1, exclusive_brands: x2, expertadvice: x3, savetime: x4 }, function (data) {
+                window.location.href = "../Authorize/uk_height_component";
+            });
         }
     }
 </script>
