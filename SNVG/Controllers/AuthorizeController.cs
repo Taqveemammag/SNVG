@@ -22,7 +22,7 @@ namespace SNVG.Controllers
             return View();
         }
         [HttpPost]
-        [ActionName("login")]
+        [ActionName("SignIn")]
         public ActionResult SignIn2(string email, string password)
         {
             try
@@ -38,8 +38,8 @@ namespace SNVG.Controllers
                 else
                 {
                     message = "Invalid Credential Applied";
-                    ViewBag.ErrorMassage = message;
-                    return RedirectToAction("SignIn", "Authorize");
+                    ViewBag.Err = message;
+                    return View();
                 }
             }
             catch (Exception)
@@ -611,6 +611,9 @@ namespace SNVG.Controllers
         {
             if (Session["Latest_UerID"] != null)
             {
+                Random _random = new Random();
+                var check = _random.Next(50, 2000);
+                ViewBag.NumberValue = check;
                 return View();
             }
             else
@@ -621,7 +624,7 @@ namespace SNVG.Controllers
 
         [HttpPost]
         [ActionName("PaymentMethod")]
-        public ActionResult paymentMethod(string COD, string CardName, string cvv, DateTime ExpiryDate, string cardnumber, string Address, string PsotCode)
+        public ActionResult paymentMethod(string COD, string CardName, string cvv, DateTime? ExpiryDate, string cardnumber, string Address, string PsotCode)
         {
             try
             {

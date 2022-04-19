@@ -1,0 +1,426 @@
+﻿
+@{
+    ViewBag.Title = "listings";
+    Layout = "~/Views/Shared/_sharedLayout.cshtml";
+}
+
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <!-- Inner Page Starts Here
+        =========================== -->
+        <div id="catagory-details" class="inner-page">
+            <!-- Bredcrums -->
+            <div class="bred-crums">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <ul class="bred-crums-nav">
+                                <li><a href="../Home/Home">Home</a></li>
+                                <li><a href="javascript:void(0);">All Shoes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bredcrums -->
+            <div class="inner-page-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-lg-3">
+                            <div class="side-2">
+                                <!-- Side Bar -->
+                                <div class="product-side-bar">
+                                    <h5>Refine by</h5>
+                                    <div id="accordion" class="panel-group panel-container">
+                                        <!-- Panel -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#collapse1" data-parent="#accordion" data-toggle="collapse" class="">Style</a>
+                                                </h4>
+                                            </div>
+                                            <div class="panel-collapse collapse in" id="collapse1" style="">
+                                                <div class="panel-body">
+                                                    <div class="panel-body">
+                                                        <form role="form">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Ballerinas & Moccasins
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Boots & Booties
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Oxfords & Loafers
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Pumps & Heels
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Sandals & Espadrilles
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Sneakers
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">Wedges
+                                                                </label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Panel -->
+                                        <!-- Panel -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#collapse2" data-parent="#accordion" data-toggle="collapse" class="collapsed">
+                                                        Color
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse2">
+                                                <div class="panel-body">
+                                                    <div class="panel-body">
+                                                        <!-- Color Selector -->
+                                                        <div class="color-slctr">
+                                                            <p><i class="fa fa-check"></i> black</p>
+                                                            <a href="javascript:void(0);"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                        <!-- Color Selector -->
+                                                        <!-- Color Selector -->
+                                                        <div class="color-slctr">
+                                                            <p><i class="fa fa-check"></i> Brown</p>
+                                                            <a href="javascript:void(0);"><i class="fa fa-close"></i></a>
+                                                        </div>
+                                                        <!-- Color Selector -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Panel -->
+                                        <!-- Panel -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#collapse3" data-parent="#accordion" data-toggle="collapse" class="collapsed">
+                                                        Size
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="collapse3">
+                                                <div class="panel-body">
+                                                    <div class="panel-body">
+                                                        <form role="form">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" ckecked type="checkbox">6
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">6.5
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">7
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">7.5
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">8
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">8.5
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">9
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">9.5
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input value="" type="checkbox">10
+                                                                </label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Panel -->
+                                        <a href="javascript:void(0);" class="default-anchor">Reset All Filter</a>
+                                    </div>
+                                    <!-- Side Bar -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-lg-9 pd-off two-item-cntnr">
+                            <div class="center-2">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <div class="brdr-crum">
+                                        <ul class="reg-nav">
+                                            <li><a href="javascript:void(0);">180 Style</a></li>
+                                            <li>
+                                                <select>
+                                                    <option>View 9 Per Page <i class="fa fa-angle-down"></option>
+                                                    <option>one</option>
+                                                    <option>two</option>
+                                                    <option>three</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select>
+                                                    <option>2 items in a row<i class="fa fa-angle-down"></option>
+                                                    <option>one</option>
+                                                    <option>two</option>
+                                                    <option>three</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <div class="sort-by">
+                                            <a href=""><i class="fa fa-th-large"></i></a>
+                                            <a href=""><i class="fa fa-th-list"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="product-mega-cntnr" class="product-list">
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer cvr" style="background-image: url('../../wwwroot/images/Boots/dress shoes1.jpg');"></a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>SAVE UP TO 30% <br>ON ALL PRODUCTS</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer" style="background-image: url('../../wwwroot/images/Boots/dress shoes2.jpg');"></a>
+                                                <a href="" class="star-bar">
+                                                    <span><input type="text" name=""><i class="fa fa-star-o"></i></span>
+                                                </a>
+                                                <a href="" class="bucket-bar">
+                                                    <span>
+                                                        <input type="text" name=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                        width="48px" height="48px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<g><g><g>
+                                                        <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
+        c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
+        C13.733,19.229,14.629,20.125,15.733,20.125z" />
+
+                                                        <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
+        s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
+        c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z" /> </g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>Fashionable Pretty Ballerinas - Moccasins - Coral</h2>
+                                                <h5>£333.00</h5>
+                                                <p class="gry">Model: SKU-CDCAB0001</p>
+                                                <h3>Description</h3>
+                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo</p>
+                                                <p class="scnd-prce">£333.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer" style="background-image: url('../../wwwroot/images/Boots/dress shoes3.jpg');"></a>
+                                                <a href="" class="star-bar">
+                                                    <span><input type="text" name=""><i class="fa fa-star-o"></i></span>
+                                                </a>
+                                                <a href="" class="bucket-bar">
+                                                    <span>
+                                                        <input type="text" name=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                        width="48px" height="48px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<g><g><g>
+                                                        <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
+        c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
+        C13.733,19.229,14.629,20.125,15.733,20.125z" />
+
+                                                        <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
+        s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
+        c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z" /> </g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>Fashionable Pretty Ballerinas - Moccasins - Coral</h2>
+                                                <h5>£333.00</h5>
+                                                <p class="gry">Model: SKU-CDCAB0001</p>
+                                                <h3>Description</h3>
+                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo</p>
+                                                <p class="scnd-prce">£333.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer" style="background-image: url('../../wwwroot/images/Boots/dress shoes4.jpg');"></a>
+                                                <a href="" class="star-bar">
+                                                    <span><input type="text" name=""><i class="fa fa-star-o"></i></span>
+                                                </a>
+                                                <a href="" class="bucket-bar">
+                                                    <span>
+                                                        <input type="text" name=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                        width="48px" height="48px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<g><g><g>
+                                                        <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
+        c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
+        C13.733,19.229,14.629,20.125,15.733,20.125z" />
+
+                                                        <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
+        s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
+        c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z" /> </g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>Fashionable Pretty Ballerinas - Moccasins - Coral</h2>
+                                                <h5>£333.00</h5>
+                                                <p class="gry">Model: SKU-CDCAB0001</p>
+                                                <h3>Description</h3>
+                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo</p>
+                                                <p class="scnd-prce">£333.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer" style="background-image: url('../../wwwroot/images/Boots/dress shoes5.jpg');"></a>
+                                                <a href="" class="star-bar">
+                                                    <span><input type="text" name=""><i class="fa fa-star-o"></i></span>
+                                                </a>
+                                                <a href="" class="bucket-bar">
+                                                    <span>
+                                                        <input type="text" name=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                        width="48px" height="48px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<g><g><g>
+                                                        <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
+        c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
+        C13.733,19.229,14.629,20.125,15.733,20.125z" />
+
+                                                        <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
+        s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
+        c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z" /> </g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>Fashionable Pretty Ballerinas - Moccasins - Coral</h2>
+                                                <h5>£333.00</h5>
+                                                <p class="gry">Model: SKU-CDCAB0001</p>
+                                                <h3>Description</h3>
+                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo</p>
+                                                <p class="scnd-prce">£333.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                    <!-- Collection Panel Main -->
+                                    <div class="colcton-pnl-main-cntnr">
+                                        <div class="colcton-pnl-main">
+                                            <div class="colcton-pnl">
+                                                <a href="../../Authorize/SignUp" class="bg-layer" style="background-image: url('../../wwwroot/images/Boots/dress shoes6.jpg');"></a>
+                                                <a href="" class="star-bar">
+                                                    <span><input type="text" name=""><i class="fa fa-star-o"></i></span>
+                                                </a>
+                                                <a href="" class="bucket-bar">
+                                                    <span>
+                                                        <input type="text" name=""><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                        width="48px" height="48px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<g><g><g>
+                                                        <path d="M15.733,20.125c1.104,0,2-0.896,2-2v-7.8C17.733,6.838,20.57,4,24.058,4c3.487,0,6.325,2.838,6.325,6.325v7.8
+        c0,1.104,0.896,2,2,2c1.104,0,2-0.896,2-2v-7.8C34.383,4.632,29.751,0,24.058,0c-5.692,0-10.324,4.632-10.324,10.325v7.8
+        C13.733,19.229,14.629,20.125,15.733,20.125z" />
+
+                                                        <path d="M47,15.631H36.383v2.494c0,2.206-1.794,4-4,4c-2.205,0-4-1.794-4-4v-2.494h-8.649v2.494c0,2.206-1.794,4-4,4
+        s-4-1.794-4-4v-2.494H1c-0.552,0-0.893,0.435-0.762,0.971L7.235,45.1C7.658,46.702,9.343,48,11,48h26
+        c1.658,0,3.342-1.299,3.767-2.9l6.996-28.498C47.893,16.065,47.553,15.631,47,15.631z" /> </g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="list-txt-pnl">
+                                                <h2>Fashionable Pretty Ballerinas - Moccasins - Coral</h2>
+                                                <h5>£333.00</h5>
+                                                <p class="gry">Model: SKU-CDCAB0001</p>
+                                                <h3>Description</h3>
+                                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo</p>
+                                                <p class="scnd-prce">£333.00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Collection Panel Main -->
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <div class="brdr-crum-top">
+                                        <ul class="reg-nav">
+                                            <li><a href="javascript:void(0);">180 Style</a></li>
+                                            <li><a href="javascript:void(0);">View 20 Per Page <i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                        <ul class="pagination-nav">
+                                            <li><a href="javascript:void(0);"><i class="fa fa-angle-left"></i></a></li>
+                                            <li class="active"><a href="javascript:void(0);">1</a></li>
+                                            <li><a href="javascript:void(0);">2</a></li>
+                                            <li><a href="javascript:void(0);">3</a></li>
+                                            <li><a href="javascript:void(0);">...</a></li>
+                                            <li><a href="javascript:void(0);">7</a></li>
+                                            <li><a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Inner Page Ends Here
+            ========================= -->
+        </div>
+    </div>
+</div>

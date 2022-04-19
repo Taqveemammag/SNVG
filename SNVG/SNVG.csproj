@@ -322,6 +322,15 @@
     <Content Include="wwwroot\images\big-1.jpg" />
     <Content Include="wwwroot\images\big-1.png" />
     <Content Include="wwwroot\images\bkt.png" />
+    <Content Include="wwwroot\images\Boots\dress shoes1.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes2.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes3.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes4.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes5.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes6.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes7.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes8.jpg" />
+    <Content Include="wwwroot\images\Boots\dress shoes9.jpg" />
     <Content Include="wwwroot\images\bucket.png" />
     <Content Include="wwwroot\images\captcha.png" />
     <Content Include="wwwroot\images\card-1.png" />
@@ -367,11 +376,27 @@
     <Content Include="wwwroot\images\ftr-1.jpg" />
     <Content Include="wwwroot\images\icon-1.png" />
     <Content Include="wwwroot\images\icon-2.png" />
+    <Content Include="wwwroot\images\idealStyles\style1.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style10.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style11.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style12.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style13.jpg" />
+    <Content Include="wwwroot\images\idealStyles\style14.jpg" />
+    <Content Include="wwwroot\images\idealStyles\style15.jpg" />
+    <Content Include="wwwroot\images\idealStyles\style2.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style27.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style29.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style3.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style4.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style5.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style6.jpeg" />
+    <Content Include="wwwroot\images\idealStyles\style8.jpeg" />
     <Content Include="wwwroot\images\logo-1.png" />
     <Content Include="wwwroot\images\logo.png" />
     <Content Include="wwwroot\images\mission-1.jpg" />
     <Content Include="wwwroot\images\mission-2.jpg" />
     <Content Include="wwwroot\images\mission-3.jpg" />
+    <Content Include="wwwroot\images\pricing.png" />
     <Content Include="wwwroot\images\recent-1.jpg" />
     <Content Include="wwwroot\images\recent-2.jpg" />
     <Content Include="wwwroot\images\recent-3.jpg" />
@@ -504,6 +529,7 @@
     <Content Include="Views\Authorize\type.cshtml" />
     <Content Include="Views\Authorize\pricing.cshtml" />
     <Content Include="Views\Authorize\ProfileUser.cshtml" />
+    <Content Include="Views\Home\listings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -140,7 +140,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next" type="submit">
+                                    <input autocomplete="off" class="form-control sbmt" name="" onclick="validation();" value="Next" type="submit">
                                 </form>
                             </div>
                         </div>
@@ -150,3 +150,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    function validation() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+        if (checkedOne == false) {
+            alert("Please select atleast one reason");
+        }
+    }
+</script>

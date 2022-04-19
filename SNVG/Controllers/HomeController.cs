@@ -16,7 +16,10 @@ namespace SNVG.Controllers
         {
             return View();
         }
-
+        public ActionResult listings()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

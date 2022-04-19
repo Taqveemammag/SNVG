@@ -7,8 +7,8 @@
 
 <script type="text/javascript">
         $(document).ready(function () {
-            var yourPrompt = '@ViewData["PromptMessage"]';
-            if (yourPrompt == "Invalid") {
+            var yourPrompt = @ViewBag.Err;
+            if (yourPrompt != null) {
                 alert("Invalid User Here");
             }
         });
@@ -109,17 +109,18 @@
                         <div class="row">
                             <div class="login-text-cntnr">
                                 <h2>Sign In</h2>
-                                <form method="post" action="login">
-                                    @Html.TextBox("email", "", new { @class = "form-control", placeholder = "Email e.g(john@example.com)", autocomplete = "off", requird= "Required"})
+                                <form method="post" action="SignIn">
+                                    @Html.TextBox("email", "", new { @class = "form-control", placeholder = "Email e.g(john@example.com)", autocomplete = "off", required = "required" })
                                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
 
-                                    @Html.TextBox("password", "", new { @class = "form-control", type = "password", placeholder = "Password....", autocomplete = "off", id = "myInput" })
+                                    @Html.TextBox("password", "", new { @class = "form-control", type = "password", placeholder = "Password....", autocomplete = "off", id = "myInput", required = "required" })
                                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                                     <input type="checkbox" onclick="myFunction()">Show Password
                                     <div class="dble-cntnr">
                                         <a href="javascript:void(0);">Remember Me</a>
                                         <a href="javascript:void(0);">Forgot Password</a>
                                     </div>
+                                    <p style="color:red; font-size:15px;">@ViewBag.Err</p>
                                     <input autocomplete="off" class="form-control sbmt" name="" value="SIGN IN" type="submit">
                                 </form>
                                 <div id="message">

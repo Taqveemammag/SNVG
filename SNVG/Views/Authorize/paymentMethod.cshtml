@@ -75,23 +75,25 @@
                                                 <ul class="Summary___style-module__fee-summary___BFP5x">
                                                     <li>Will be deducted from the cost of any items you purchase</li>
                                                 </ul>
-                                            </div><div>£10</div>
+                                            </div>
+                                            <div>£@ViewBag.NumberValue</div>
                                         </div>
                                         <div class="Summary___style-module__total___h74c9">
                                             <div>Total</div>
-                                            <div>£10</div>
+                                            <div>£@ViewBag.NumberValue</div>
                                         </div>
-                                        <h4 class="Summary___style-module__title___X8FZV Summary___style-module__payment-copy___AqF7w">Add your payment details</h4>
                                     </div>
+
+                                    <h4 class="Summary___style-module__title___X8FZV Summary___style-module__payment-copy___AqF7w">Add your payment details</h4>
                                     <h3 class="">Credit Card or Debit Card Details</h3>
-                                    <input autocomplete="off" class="form-control" name="CardName" placeholder="CardHolder Name" type="text">
-                                    <input autocomplete="off" class="form-control" name="cardnumber" placeholder="Card Number" type="text">
-                                    <input autocomplete="off" class="form-control" name="ExpiryDate" placeholder="Expiration" type="datetime">
-                                    <input autocomplete="off" class="form-control" name="cvv" placeholder="CVV" type="text">
-                                    <input autocomplete="off" class="form-control" name="PsotCode" placeholder="Postcode" type="text">
+                                    <input autocomplete="off" class="form-control" name="CardName" placeholder="CardHolder Name" type="text" id="CardName">
+                                    <input autocomplete="off" class="form-control" name="cardnumber" placeholder="Card Number eg(11111111111)" type="number" id="cardnumber">
+                                    <input autocomplete="off" class="form-control" name="ExpiryDate" placeholder="Expiration eg(2022/04/20)" type="datetime" id="ExpiryDate">
+                                    <input autocomplete="off" class="form-control" name="cvv" placeholder="CVV" type="number" id="cvv">
+                                    <input autocomplete="off" class="form-control" name="PsotCode" placeholder="Postcode eg(45614)" type="number" required>
                                     <input autocomplete="off" class="form-control" name="Address" placeholder="Address" type="text" required>
-                                    <input type="checkbox" name="COD"> Cash On Delivery
-                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next : Shipping" type="submit">
+                                    <input type="checkbox" name="COD" onclick="testCheck()" id="myInput"> Cash On Delivery
+                                    <input autocomplete="off" class="form-control sbmt" name="" value="Next : Checkout" type="submit">
                                 </form>
                             </div>
                         </div>
@@ -101,3 +103,20 @@
         </div>
     </div>
 </div>
+<script>
+    function testCheck() {
+        var x = document.getElementById("myInput");
+        if (x.checked == true) {
+            document.getElementById("CardName").disabled = true;
+            document.getElementById("cardnumber").disabled = true;
+            document.getElementById("ExpiryDate").disabled = true;
+            document.getElementById("cvv").disabled = true;
+        }
+        else {
+            document.getElementById("CardName").disabled = false;
+            document.getElementById("cardnumber").disabled = false;
+            document.getElementById("ExpiryDate").disabled = false;
+            document.getElementById("cvv").disabled = false;
+        }
+    }
+</script>
